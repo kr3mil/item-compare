@@ -38,7 +38,7 @@ public class SkyblockItemStats {
         
         SkyblockItemStats stats = new SkyblockItemStats(itemName, rarity, itemType);
         
-        List<Text> lore = item.getTooltip(null, null);
+        List<Text> lore = item.getTooltip(net.minecraft.item.Item.TooltipContext.DEFAULT, null, net.minecraft.item.tooltip.TooltipType.BASIC);
         
         for (Text line : lore) {
             String lineText = line.getString();

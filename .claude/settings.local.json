@@ -4,7 +4,12 @@
       "Bash(mkdir:*)",
       "Bash(gradle:*)",
       "Bash(sudo apt:*)",
-      "Bash(sudo apt install:*)"
+      "Bash(sudo apt install:*)",
+      "WebFetch(domain:maven.fabricmc.net)",
+      "Bash(java:*)",
+      "Bash(./gradlew:*)",
+      "Bash(echo $JAVA_HOME)",
+      "Bash(export:*)"
     ],
     "deny": []
   }
