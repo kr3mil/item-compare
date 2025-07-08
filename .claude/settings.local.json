@@ -9,7 +9,9 @@
       "Bash(java:*)",
       "Bash(./gradlew:*)",
       "Bash(echo $JAVA_HOME)",
-      "Bash(export:*)"
+      "Bash(export:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(find:*)"
     ],
     "deny": []
   }

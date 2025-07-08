@@ -1,8 +1,8 @@
 {
-  "key.hypixel-compare.compare": "Compare Items",
+  "key.hypixel-compare.compare": "Select/Compare Item",
+  "key.hypixel-compare.reset": "Reset Selection",
   "category.hypixel-compare.general": "Hypixel Compare",
-  "text.hypixel-compare.comparison_mode": "Comparison Mode",
-  "text.hypixel-compare.select_first": "Select first item to compare",
-  "text.hypixel-compare.select_second": "Select second item to compare",
-  "text.hypixel-compare.comparing": "Comparing Items"
+  "text.hypixel-compare.first_selected": "First item selected: %s",
+  "text.hypixel-compare.no_item_hovered": "No item hovered",
+  "text.hypixel-compare.selection_reset": "Selection reset"
 }
