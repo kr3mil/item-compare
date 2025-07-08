@@ -1,0 +1,49 @@
+# Gradle
+.gradle/
+build/
+out/
+gradle-app.setting
+
+# Idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fabric
+run/
+logs/
+remappedSrc/
+
+# Minecraft
+minecraft/
+saves/
+screenshots/
+texturepacks/
+resourcepacks/
+
+# Miscellaneous
+*.log
+*.tmp
+*.temp
+.cache/
+.loom-cache/
