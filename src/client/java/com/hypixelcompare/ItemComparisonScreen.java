@@ -38,6 +38,11 @@ public class ItemComparisonScreen extends Screen {
     }
     
     @Override
+    public void renderBackground(DrawContext context, int mouseX, int mouseY, float delta) {
+        // Override to prevent any background blur - do nothing
+    }
+    
+    @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         // Draw a solid dark background - no blur
         context.fill(0, 0, this.width, this.height, 0xC0000000);
@@ -66,7 +71,13 @@ public class ItemComparisonScreen extends Screen {
         int comparisonY = renderStatComparison(context, centerX, startY + 70);
         renderEnchantmentComparison(context, centerX, comparisonY + 20);
         
-        super.render(context, mouseX, mouseY, delta);
+        // Don't call super.render() to avoid any blur effects
+        // Instead, manually render the widgets
+        for (var child : this.children()) {
+            if (child instanceof net.minecraft.client.gui.Drawable drawable) {
+                drawable.render(context, mouseX, mouseY, delta);
+            }
+        }
     }
     
     private void renderItemHeader(DrawContext context, int x, int y, ItemStack item, 
