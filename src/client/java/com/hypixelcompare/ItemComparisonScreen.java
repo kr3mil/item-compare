@@ -39,12 +39,22 @@ public class ItemComparisonScreen extends Screen {
     
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        // Draw a semi-transparent dark background instead of blurred background
+        context.fill(0, 0, this.width, this.height, 0x80000000);
         
         int centerX = this.width / 2;
         int startY = 30;
         
-        context.drawCenteredTextWithShadow(this.textRenderer, this.title, centerX, 10, 0xFFFFFF);
+        // Draw a darker panel for the comparison area
+        int panelWidth = 500;
+        int panelHeight = 400;
+        int panelX = centerX - panelWidth / 2;
+        int panelY = startY - 10;
+        context.fill(panelX, panelY, panelX + panelWidth, panelY + panelHeight, 0x90000000);
+        
+        // Update title to be more descriptive
+        String titleText = "§6Item Comparison: §f" + firstItem.getName().getString() + " §7vs §f" + secondItem.getName().getString();
+        context.drawCenteredTextWithShadow(this.textRenderer, titleText, centerX, 10, 0xFFFFFF);
         
         renderItemHeader(context, centerX - 200, startY, firstItem, firstStats, "Current Item");
         renderItemHeader(context, centerX + 100, startY, secondItem, secondStats, "Compared Item");
