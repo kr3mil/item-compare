@@ -37,6 +37,23 @@ public class SkyblockItemStats {
     private static final Pattern MANA_PLAIN_PATTERN = Pattern.compile("Mana: \\+?(\\d+)");
     private static final Pattern RARITY_PLAIN_PATTERN = Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
     
+    // Mining and specialized stats
+    private static final Pattern MINING_SPEED_PLAIN_PATTERN = Pattern.compile("Mining Speed: \\+?(\\d+)");
+    private static final Pattern MINING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Mining Fortune: \\+?(\\d+)");
+    private static final Pattern BREAKING_POWER_PLAIN_PATTERN = Pattern.compile("Breaking Power (\\d+)");
+    private static final Pattern INTELLIGENCE_PLAIN_PATTERN = Pattern.compile("Intelligence: \\+?(\\d+)");
+    private static final Pattern MAGIC_FIND_PLAIN_PATTERN = Pattern.compile("Magic Find: \\+?(\\d+)");
+    private static final Pattern PET_LUCK_PLAIN_PATTERN = Pattern.compile("Pet Luck: \\+?(\\d+)");
+    private static final Pattern SEA_CREATURE_CHANCE_PLAIN_PATTERN = Pattern.compile("Sea Creature Chance: \\+?(\\d+)%");
+    private static final Pattern FISHING_SPEED_PLAIN_PATTERN = Pattern.compile("Fishing Speed: \\+?(\\d+)");
+    private static final Pattern FEROCITY_PLAIN_PATTERN = Pattern.compile("Ferocity: \\+?(\\d+)");
+    private static final Pattern ABILITY_DAMAGE_PLAIN_PATTERN = Pattern.compile("Ability Damage: \\+?(\\d+)%");
+    private static final Pattern BONUS_ATTACK_SPEED_PLAIN_PATTERN = Pattern.compile("Bonus Attack Speed: \\+?(\\d+)%");
+    private static final Pattern TRUE_DEFENSE_PLAIN_PATTERN = Pattern.compile("True Defense: \\+?(\\d+)");
+    private static final Pattern VITALITY_PLAIN_PATTERN = Pattern.compile("Vitality: \\+?(\\d+)");
+    private static final Pattern FARMING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Farming Fortune: \\+?(\\d+)");
+    private static final Pattern FORAGING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Foraging Fortune: \\+?(\\d+)");
+    
     public SkyblockItemStats(String itemName, String rarity, String itemType) {
         this.itemName = itemName;
         this.rarity = rarity;
@@ -92,6 +109,23 @@ public class SkyblockItemStats {
             stats.parseStat(lineText, "Health", HEALTH_PLAIN_PATTERN);
             stats.parseStat(lineText, "Mana", MANA_PATTERN);
             stats.parseStat(lineText, "Mana", MANA_PLAIN_PATTERN);
+            
+            // Mining and specialized stats
+            stats.parseStat(lineText, "Mining Speed", MINING_SPEED_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Mining Fortune", MINING_FORTUNE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Breaking Power", BREAKING_POWER_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Intelligence", INTELLIGENCE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Magic Find", MAGIC_FIND_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Pet Luck", PET_LUCK_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Sea Creature Chance", SEA_CREATURE_CHANCE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Fishing Speed", FISHING_SPEED_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Ferocity", FEROCITY_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Ability Damage", ABILITY_DAMAGE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Bonus Attack Speed", BONUS_ATTACK_SPEED_PLAIN_PATTERN);
+            stats.parseStat(lineText, "True Defense", TRUE_DEFENSE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Vitality", VITALITY_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Farming Fortune", FARMING_FORTUNE_PLAIN_PATTERN);
+            stats.parseStat(lineText, "Foraging Fortune", FORAGING_FORTUNE_PLAIN_PATTERN);
             
             Matcher generalMatcher = STAT_PATTERN.matcher(lineText);
             if (generalMatcher.find()) {

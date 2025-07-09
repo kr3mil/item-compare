@@ -68,7 +68,10 @@ public class ItemComparisonScreen extends Screen {
         
         int currentY = startY + 20;
         String[] statOrder = {"Damage", "Defense", "Strength", "Crit Chance", "Crit Damage", 
-                            "Speed", "Health", "Mana"};
+                            "Speed", "Health", "Mana", "Intelligence", "Mining Speed", "Mining Fortune", 
+                            "Breaking Power", "Fishing Speed", "Sea Creature Chance", "Farming Fortune", 
+                            "Foraging Fortune", "Magic Find", "Pet Luck", "Ferocity", "Ability Damage", 
+                            "Bonus Attack Speed", "True Defense", "Vitality"};
         
         for (String stat : statOrder) {
             int firstValue = firstStats.getStat(stat);
@@ -83,7 +86,9 @@ public class ItemComparisonScreen extends Screen {
     private int renderStatDifference(DrawContext context, int centerX, int y, String statName, int firstValue, int secondValue) {
         int difference = secondValue - firstValue;
         String statColor = getStatColor(statName);
-        String suffix = (statName.equals("Crit Chance") || statName.equals("Crit Damage")) ? "%" : "";
+        String suffix = (statName.equals("Crit Chance") || statName.equals("Crit Damage") || 
+                        statName.equals("Sea Creature Chance") || statName.equals("Ability Damage") || 
+                        statName.equals("Bonus Attack Speed")) ? "%" : "";
         
         // Base stat line
         String baseStat = "§7" + statName + ": " + statColor + firstValue + suffix;
@@ -135,13 +140,31 @@ public class ItemComparisonScreen extends Screen {
             case "Strength":
             case "Crit Chance":
             case "Crit Damage":
+            case "Ferocity":
+            case "Ability Damage":
+            case "Bonus Attack Speed":
                 return "§c";
             case "Defense":
             case "Health":
             case "Speed":
+            case "True Defense":
+            case "Vitality":
                 return "§a";
             case "Mana":
+            case "Intelligence":
                 return "§b";
+            case "Mining Speed":
+            case "Mining Fortune":
+            case "Breaking Power":
+            case "Farming Fortune":
+            case "Foraging Fortune":
+                return "§6"; // Gold for mining/farming stats
+            case "Fishing Speed":
+            case "Sea Creature Chance":
+                return "§3"; // Dark aqua for fishing stats
+            case "Magic Find":
+            case "Pet Luck":
+                return "§d"; // Light purple for luck-based stats
             default:
                 return "§a";
         }
