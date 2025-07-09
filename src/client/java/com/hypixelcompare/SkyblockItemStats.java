@@ -10,49 +10,16 @@ import java.util.regex.Pattern;
 
 public class SkyblockItemStats {
     public final Map<String, Integer> stats = new HashMap<>();
+    public final Set<String> percentageStats = new HashSet<>();
     private final String itemName;
     private String rarity;
     private final String itemType;
     
-    // Patterns for text with color codes (if available)
-    private static final Pattern STAT_PATTERN = Pattern.compile("§7([^:]+): §[a-f0-9]\\+?(\\d+)");
-    private static final Pattern RARITY_PATTERN = Pattern.compile("§[a-f0-9]§l([A-Z ]+)");
-    private static final Pattern DAMAGE_PATTERN = Pattern.compile("§7Damage: §c\\+?(\\d+)");
-    private static final Pattern DEFENSE_PATTERN = Pattern.compile("§7Defense: §a\\+?(\\d+)");
-    private static final Pattern STRENGTH_PATTERN = Pattern.compile("§7Strength: §c\\+?(\\d+)");
-    private static final Pattern CRIT_CHANCE_PATTERN = Pattern.compile("§7Crit Chance: §c\\+?(\\d+)%");
-    private static final Pattern CRIT_DAMAGE_PATTERN = Pattern.compile("§7Crit Damage: §c\\+?(\\d+)%");
-    private static final Pattern SPEED_PATTERN = Pattern.compile("§7Speed: §a\\+?(\\d+)");
-    private static final Pattern HEALTH_PATTERN = Pattern.compile("§7Health: §a\\+?(\\d+)");
-    private static final Pattern MANA_PATTERN = Pattern.compile("§7Mana: §b\\+?(\\d+)");
-    
-    // Patterns for plain text (without color codes)
-    private static final Pattern DAMAGE_PLAIN_PATTERN = Pattern.compile("Damage: \\+?(\\d+)");
-    private static final Pattern DEFENSE_PLAIN_PATTERN = Pattern.compile("Defense: \\+?(\\d+)");
-    private static final Pattern STRENGTH_PLAIN_PATTERN = Pattern.compile("Strength: \\+?(\\d+)");
-    private static final Pattern CRIT_CHANCE_PLAIN_PATTERN = Pattern.compile("Crit Chance: \\+?(\\d+)%");
-    private static final Pattern CRIT_DAMAGE_PLAIN_PATTERN = Pattern.compile("Crit Damage: \\+?(\\d+)%");
-    private static final Pattern SPEED_PLAIN_PATTERN = Pattern.compile("Speed: \\+?(\\d+)");
-    private static final Pattern HEALTH_PLAIN_PATTERN = Pattern.compile("Health: \\+?(\\d+)");
-    private static final Pattern MANA_PLAIN_PATTERN = Pattern.compile("Mana: \\+?(\\d+)");
-    private static final Pattern RARITY_PLAIN_PATTERN = Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
-    
-    // Mining and specialized stats
-    private static final Pattern MINING_SPEED_PLAIN_PATTERN = Pattern.compile("Mining Speed: \\+?(\\d+)");
-    private static final Pattern MINING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Mining Fortune: \\+?(\\d+)");
-    private static final Pattern BREAKING_POWER_PLAIN_PATTERN = Pattern.compile("Breaking Power (\\d+)");
-    private static final Pattern INTELLIGENCE_PLAIN_PATTERN = Pattern.compile("Intelligence: \\+?(\\d+)");
-    private static final Pattern MAGIC_FIND_PLAIN_PATTERN = Pattern.compile("Magic Find: \\+?(\\d+)");
-    private static final Pattern PET_LUCK_PLAIN_PATTERN = Pattern.compile("Pet Luck: \\+?(\\d+)");
-    private static final Pattern SEA_CREATURE_CHANCE_PLAIN_PATTERN = Pattern.compile("Sea Creature Chance: \\+?(\\d+)%");
-    private static final Pattern FISHING_SPEED_PLAIN_PATTERN = Pattern.compile("Fishing Speed: \\+?(\\d+)");
-    private static final Pattern FEROCITY_PLAIN_PATTERN = Pattern.compile("Ferocity: \\+?(\\d+)");
-    private static final Pattern ABILITY_DAMAGE_PLAIN_PATTERN = Pattern.compile("Ability Damage: \\+?(\\d+)%");
-    private static final Pattern BONUS_ATTACK_SPEED_PLAIN_PATTERN = Pattern.compile("Bonus Attack Speed: \\+?(\\d+)%");
-    private static final Pattern TRUE_DEFENSE_PLAIN_PATTERN = Pattern.compile("True Defense: \\+?(\\d+)");
-    private static final Pattern VITALITY_PLAIN_PATTERN = Pattern.compile("Vitality: \\+?(\\d+)");
-    private static final Pattern FARMING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Farming Fortune: \\+?(\\d+)");
-    private static final Pattern FORAGING_FORTUNE_PLAIN_PATTERN = Pattern.compile("Foraging Fortune: \\+?(\\d+)");
+    // Generic patterns to catch all stats
+    private static final Pattern STAT_WITH_PERCENT_PATTERN = Pattern.compile("([A-Za-z][A-Za-z ]+): \\+?(\\d+)%");
+    private static final Pattern STAT_WITH_VALUE_PATTERN = Pattern.compile("([A-Za-z][A-Za-z ]+): \\+?(\\d+)(?!%)");
+    private static final Pattern BREAKING_POWER_PATTERN = Pattern.compile("Breaking Power (\\d+)");
+    private static final Pattern RARITY_PATTERN = Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
     
     public SkyblockItemStats(String itemName, String rarity, String itemType) {
         this.itemName = itemName;
@@ -79,60 +46,45 @@ public class SkyblockItemStats {
             
             HypixelCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
             
-            // Try to parse rarity from both patterns
+            // Parse rarity
             Matcher rarityMatcher = RARITY_PATTERN.matcher(lineText);
             if (rarityMatcher.find()) {
                 rarity = rarityMatcher.group(1);
-                HypixelCompare.LOGGER.info("Found rarity (colored): " + rarity);
-            } else {
-                Matcher rarityPlainMatcher = RARITY_PLAIN_PATTERN.matcher(lineText);
-                if (rarityPlainMatcher.find()) {
-                    rarity = rarityPlainMatcher.group(1);
-                    HypixelCompare.LOGGER.info("Found rarity (plain): " + rarity);
+                HypixelCompare.LOGGER.info("Found rarity: " + rarity);
+            }
+            
+            // Parse percentage stats first
+            Matcher percentMatcher = STAT_WITH_PERCENT_PATTERN.matcher(lineText);
+            if (percentMatcher.find()) {
+                String statName = percentMatcher.group(1).trim();
+                int value = Integer.parseInt(percentMatcher.group(2));
+                if (!stats.stats.containsKey(statName)) {
+                    stats.stats.put(statName, value);
+                    stats.percentageStats.add(statName);
+                    HypixelCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
                 }
             }
             
-            // Try colored patterns first, then plain patterns
-            stats.parseStat(lineText, "Damage", DAMAGE_PATTERN);
-            stats.parseStat(lineText, "Damage", DAMAGE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Defense", DEFENSE_PATTERN);
-            stats.parseStat(lineText, "Defense", DEFENSE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Strength", STRENGTH_PATTERN);
-            stats.parseStat(lineText, "Strength", STRENGTH_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Crit Chance", CRIT_CHANCE_PATTERN);
-            stats.parseStat(lineText, "Crit Chance", CRIT_CHANCE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Crit Damage", CRIT_DAMAGE_PATTERN);
-            stats.parseStat(lineText, "Crit Damage", CRIT_DAMAGE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Speed", SPEED_PATTERN);
-            stats.parseStat(lineText, "Speed", SPEED_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Health", HEALTH_PATTERN);
-            stats.parseStat(lineText, "Health", HEALTH_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Mana", MANA_PATTERN);
-            stats.parseStat(lineText, "Mana", MANA_PLAIN_PATTERN);
+            // Parse regular stats
+            Matcher valueMatcher = STAT_WITH_VALUE_PATTERN.matcher(lineText);
+            if (valueMatcher.find()) {
+                String statName = valueMatcher.group(1).trim();
+                int value = Integer.parseInt(valueMatcher.group(2));
+                if (!stats.stats.containsKey(statName)) {
+                    stats.stats.put(statName, value);
+                    HypixelCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
+                }
+            }
             
-            // Mining and specialized stats
-            stats.parseStat(lineText, "Mining Speed", MINING_SPEED_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Mining Fortune", MINING_FORTUNE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Breaking Power", BREAKING_POWER_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Intelligence", INTELLIGENCE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Magic Find", MAGIC_FIND_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Pet Luck", PET_LUCK_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Sea Creature Chance", SEA_CREATURE_CHANCE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Fishing Speed", FISHING_SPEED_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Ferocity", FEROCITY_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Ability Damage", ABILITY_DAMAGE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Bonus Attack Speed", BONUS_ATTACK_SPEED_PLAIN_PATTERN);
-            stats.parseStat(lineText, "True Defense", TRUE_DEFENSE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Vitality", VITALITY_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Farming Fortune", FARMING_FORTUNE_PLAIN_PATTERN);
-            stats.parseStat(lineText, "Foraging Fortune", FORAGING_FORTUNE_PLAIN_PATTERN);
-            
-            Matcher generalMatcher = STAT_PATTERN.matcher(lineText);
-            if (generalMatcher.find()) {
-                String statName = generalMatcher.group(1);
-                int value = Integer.parseInt(generalMatcher.group(2));
-                stats.stats.put(statName, value);
-                HypixelCompare.LOGGER.info("General stat found: " + statName + " = " + value);
+            // Parse special case: Breaking Power
+            Matcher breakingPowerMatcher = BREAKING_POWER_PATTERN.matcher(lineText);
+            if (breakingPowerMatcher.find()) {
+                String statName = "Breaking Power";
+                int value = Integer.parseInt(breakingPowerMatcher.group(1));
+                if (!stats.stats.containsKey(statName)) {
+                    stats.stats.put(statName, value);
+                    HypixelCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
+                }
             }
         }
         
@@ -145,13 +97,8 @@ public class SkyblockItemStats {
         return stats;
     }
     
-    private void parseStat(String line, String statName, Pattern pattern) {
-        Matcher matcher = pattern.matcher(line);
-        if (matcher.find()) {
-            int value = Integer.parseInt(matcher.group(1));
-            stats.put(statName, value);
-            HypixelCompare.LOGGER.info("Specific stat found: " + statName + " = " + value + " (pattern matched)");
-        }
+    public boolean isPercentageStat(String statName) {
+        return percentageStats.contains(statName);
     }
     
     public List<String> getFormattedStats() {

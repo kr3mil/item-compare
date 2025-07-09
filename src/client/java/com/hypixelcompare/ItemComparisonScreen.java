@@ -6,6 +6,8 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
+import java.util.*;
+
 public class ItemComparisonScreen extends Screen {
     private final ItemStack firstItem;
     private final ItemStack secondItem;
@@ -67,28 +69,42 @@ public class ItemComparisonScreen extends Screen {
         context.drawCenteredTextWithShadow(this.textRenderer, "§eSTAT COMPARISON", centerX, startY, 0xFFFF55);
         
         int currentY = startY + 20;
-        String[] statOrder = {"Damage", "Defense", "Strength", "Crit Chance", "Crit Damage", 
-                            "Speed", "Health", "Mana", "Intelligence", "Mining Speed", "Mining Fortune", 
-                            "Breaking Power", "Fishing Speed", "Sea Creature Chance", "Farming Fortune", 
-                            "Foraging Fortune", "Magic Find", "Pet Luck", "Ferocity", "Ability Damage", 
-                            "Bonus Attack Speed", "True Defense", "Vitality"};
         
-        for (String stat : statOrder) {
+        // Get all unique stats from both items
+        Set<String> allStats = new HashSet<>();
+        allStats.addAll(firstStats.stats.keySet());
+        allStats.addAll(secondStats.stats.keySet());
+        
+        // Sort stats for consistent display
+        List<String> sortedStats = new ArrayList<>(allStats);
+        sortedStats.sort(String::compareTo);
+        
+        // Display stats with preference for important ones first
+        String[] priorityOrder = {"Damage", "Defense", "Strength", "Health", "Mana", "Intelligence", 
+                                "Speed", "Mining Speed", "Mining Fortune", "Breaking Power"};
+        
+        // Show priority stats first
+        for (String stat : priorityOrder) {
+            if (allStats.contains(stat)) {
+                int firstValue = firstStats.getStat(stat);
+                int secondValue = secondStats.getStat(stat);
+                currentY += renderStatDifference(context, centerX, currentY, stat, firstValue, secondValue);
+                sortedStats.remove(stat);
+            }
+        }
+        
+        // Show remaining stats alphabetically
+        for (String stat : sortedStats) {
             int firstValue = firstStats.getStat(stat);
             int secondValue = secondStats.getStat(stat);
-            
-            if (firstValue > 0 || secondValue > 0) {
-                currentY += renderStatDifference(context, centerX, currentY, stat, firstValue, secondValue);
-            }
+            currentY += renderStatDifference(context, centerX, currentY, stat, firstValue, secondValue);
         }
     }
     
     private int renderStatDifference(DrawContext context, int centerX, int y, String statName, int firstValue, int secondValue) {
         int difference = secondValue - firstValue;
         String statColor = getStatColor(statName);
-        String suffix = (statName.equals("Crit Chance") || statName.equals("Crit Damage") || 
-                        statName.equals("Sea Creature Chance") || statName.equals("Ability Damage") || 
-                        statName.equals("Bonus Attack Speed")) ? "%" : "";
+        String suffix = (firstStats.isPercentageStat(statName) || secondStats.isPercentageStat(statName)) ? "%" : "";
         
         // Base stat line
         String baseStat = "§7" + statName + ": " + statColor + firstValue + suffix;
