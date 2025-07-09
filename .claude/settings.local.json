@@ -11,7 +11,8 @@
       "Bash(echo $JAVA_HOME)",
       "Bash(export:*)",
       "WebFetch(domain:github.com)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

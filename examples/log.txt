@@ -1,0 +1,726 @@
+Prism Launcher version: 9.4 (official)
+
+
+Launched instance in online mode
+
+login.microsoftonline.com resolves to:
+    [40.126.31.128, 40.126.31.69, 20.190.159.68, 20.190.159.4, 20.190.159.128, 40.126.31.131, 20.190.159.0, 40.126.31.71]
+
+
+session.minecraft.net resolves to:
+    [13.107.246.64]
+
+
+textures.minecraft.net resolves to:
+    [13.107.246.64]
+
+
+api.mojang.com resolves to:
+    [13.107.246.64]
+
+
+Minecraft folder is:
+C:/Users/theor/AppData/Roaming/PrismLauncher/instances/Skyblocker Modpack - Hypixel Skyblock/minecraft
+
+
+Java path is:
+C:/Users/theor/AppData/Roaming/PrismLauncher/java/java-runtime-delta/bin/javaw.exe
+
+
+Java is version 21.0.3, using 64 (amd64) architecture, from Microsoft.
+
+
+Main Class:
+  net.fabricmc.loader.impl.launch.knot.KnotClient
+
+Native path:
+  C:/Users/theor/AppData/Roaming/PrismLauncher/instances/Skyblocker Modpack - Hypixel Skyblock/natives
+
+Traits:
+traits FirstThreadOnMacOS
+traits XR:Initial
+traits feature:is_quick_play_multiplayer
+traits feature:is_quick_play_singleplayer
+
+Libraries:
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-freetype-natives-windows-arm64/3.3.3/lwjgl-freetype-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-freetype-natives-windows-x86/3.3.3/lwjgl-freetype-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-freetype-natives-windows/3.3.3/lwjgl-freetype-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-freetype/3.3.3/lwjgl-freetype-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-windows-arm64/3.3.3/lwjgl-glfw-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-windows-x86/3.3.3/lwjgl-glfw-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw-natives-windows/3.3.3/lwjgl-glfw-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-glfw/3.3.3/lwjgl-glfw-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-windows-arm64/3.3.3/lwjgl-jemalloc-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-windows-x86/3.3.3/lwjgl-jemalloc-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc-natives-windows/3.3.3/lwjgl-jemalloc-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-jemalloc/3.3.3/lwjgl-jemalloc-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-windows-arm64/3.3.3/lwjgl-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-windows-x86/3.3.3/lwjgl-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-natives-windows/3.3.3/lwjgl-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-windows-arm64/3.3.3/lwjgl-openal-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-windows-x86/3.3.3/lwjgl-openal-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-openal-natives-windows/3.3.3/lwjgl-openal-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-openal/3.3.3/lwjgl-openal-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-windows-arm64/3.3.3/lwjgl-opengl-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-windows-x86/3.3.3/lwjgl-opengl-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl-natives-windows/3.3.3/lwjgl-opengl-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-opengl/3.3.3/lwjgl-opengl-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-windows-arm64/3.3.3/lwjgl-stb-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-windows-x86/3.3.3/lwjgl-stb-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-stb-natives-windows/3.3.3/lwjgl-stb-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-stb/3.3.3/lwjgl-stb-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-windows-arm64/3.3.3/lwjgl-tinyfd-natives-windows-arm64-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-windows-x86/3.3.3/lwjgl-tinyfd-natives-windows-x86-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd-natives-windows/3.3.3/lwjgl-tinyfd-natives-windows-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl-tinyfd/3.3.3/lwjgl-tinyfd-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lwjgl/lwjgl/3.3.3/lwjgl-3.3.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/github/oshi/oshi-core/6.6.5/oshi-core-6.6.5.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/google/guava/guava/33.3.1-jre/guava-33.3.1-jre.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/ibm/icu/icu4j/76.1/icu4j-76.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/microsoft/azure/msal4j/1.17.2/msal4j-1.17.2.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/authlib/6.0.58/authlib-6.0.58.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/brigadier/1.3.10/brigadier-1.3.10.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/datafixerupper/8.0.16/datafixerupper-8.0.16.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/jtracy/1.0.29/jtracy-1.0.29.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/jtracy-natives-windows/1.0.29/jtracy-natives-windows-1.0.29.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/logging/1.5.10/logging-1.5.10.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/text2speech/1.18.11/text2speech-1.18.11.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/nimbusds/content-type/2.3/content-type-2.3.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/nimbusds/lang-tag/1.7/lang-tag-1.7.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/nimbusds/nimbus-jose-jwt/9.40/nimbus-jose-jwt-9.40.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/nimbusds/oauth2-oidc-sdk/11.18/oauth2-oidc-sdk-11.18.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/commons-logging/commons-logging/1.3.4/commons-logging-1.3.4.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-transport-classes-epoll/4.1.118.Final/netty-transport-classes-epoll-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-transport-native-unix-common/4.1.118.Final/netty-transport-native-unix-common-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/it/unimi/dsi/fastutil/8.5.15/fastutil-8.5.15.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/java/dev/jna/jna-platform/5.15.0/jna-platform-5.15.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/java/dev/jna/jna/5.15.0/jna-5.15.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.24.1/log4j-api-2.24.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.24.1/log4j-core-2.24.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.24.1/log4j-slf4j2-impl-2.24.1.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/joml/joml/1.10.8/joml-1.10.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/ow2/asm/asm/9.8/asm-9.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/fabricmc/intermediary/1.21.5/intermediary-1.21.5.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/ow2/asm/asm-analysis/9.8/asm-analysis-9.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/ow2/asm/asm-commons/9.8/asm-commons-9.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/ow2/asm/asm-tree/9.8/asm-tree-9.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/org/ow2/asm/asm-util/9.8/asm-util-9.8.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/sponge-mixin-0.15.5+mixin.0.8.7.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/fabricmc/fabric-loader/0.16.14/fabric-loader-0.16.14.jar
+  C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/com/mojang/minecraft/1.21.5/minecraft-1.21.5-client.jar
+
+Native libraries:
+
+Mods:
+  [✔] aaron-mod-2.2.0+1.21.5
+  [✔] architectury-16.1.4-fabric
+  [✔] chatpatches-215.6.16
+  [✔] cloth-config-18.0.145-fabric
+  [✔] entityculling-fabric-1.8.0-mc1.21.5
+  [✔] fabric-api-0.128.1+1.21.5
+  [✔] fabric-language-kotlin-1.13.4+kotlin.2.2.0
+  [✔] ferritecore-8.0.0-fabric
+  [✔] Gamma-Utils-2.2.5+mc1.21.5
+  [✔] hypixel-compare-1.0.0
+  [✔] ImmediatelyFast-Fabric-1.9.5+1.21.5
+  [✔] iris-fabric-1.8.11+mc1.21.5
+  [✔] lithium-fabric-0.16.3+mc1.21.5
+  [✔] modelfix-1.21.5-1.12-fabric
+  [✔] modmenu-14.0.0-rc.2
+  [✔] placeholder-api-2.6.4+1.21.5
+  [✔] reeses-sodium-options-fabric-1.8.3+mc1.21.4
+  [✔] RoughlyEnoughItems-19.0.809-fabric
+  [✔] skyblocker-5.4.0+1.21.5
+  [✔] skyblocker-modpack-lib-1.0.0
+  [✔] sodium-extra-fabric-0.6.3+mc1.21.5
+  [✔] sodium-fabric-0.6.13+mc1.21.5
+  [✔] tooltip-scroll-1.4.0+1.21.3
+  [✔] yet_another_config_lib_v3-3.7.1+1.21.5-fabric
+  [✔] yosbr-0.1.2
+  [✔] Zoomify-2.14.2+1.21.3
+
+Params:
+  --username  --version 1.21.5 --gameDir C:/Users/theor/AppData/Roaming/PrismLauncher/instances/Skyblocker Modpack - Hypixel Skyblock/minecraft --assetsDir C:/Users/theor/AppData/Roaming/PrismLauncher/assets --assetIndex 24 --uuid  --accessToken  --userType  --versionType release
+
+Window size: 854 x 480
+
+Launcher: standard
+
+Java Arguments:
+[-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump, -Xms512m, -Xmx16000m, -Duser.language=en]
+
+
+Minecraft process ID: 11412
+
+
+[19:28:21] [main/INFO]: Loading Minecraft 1.21.5 with Fabric Loader 0.16.14
+[19:28:21] [ForkJoinPool-1-worker-6/WARN]: Mod org_eclipse_jgit_org_eclipse_jgit uses the version 7.1.0.202411261347-r which isn't compatible with Loader's extended semantic version format (Could not parse version number component '202411261347'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[19:28:21] [main/WARN]: Warnings were found!
+ - Mod 'Skyblocker' (skyblocker) 5.4.0+1.21.5 conflicts with any version of mod 'Iris' (iris), which is present with the following versions: 1.8.11+mc1.21.5!
+	 - While this won't prevent you from starting the game, the developer(s) of mod 'Skyblocker' (skyblocker) have found that this combination may cause issues. You should remove one of the mods or check for updates that resolve the issue.
+[19:28:21] [main/INFO]: Loading 116 mods:
+	- aaron-mod 2.2.0+1.21.5
+	   |-- hm-api 1.0.1+1.21.2
+	   |-- net_azureaaron_legacy-item-dfu 1.0.3+1.21.5
+	   \-- net_azureaaron_networth-calculator 1.0.5
+	- architectury 16.1.4
+	- chatpatches 215.6.16
+	- cloth-config 18.0.145
+	   \-- cloth-basic-math 0.6.1
+	- entityculling 1.8.0
+	   |-- transition 1.0.2
+	   \-- trender 1.0.4
+	- fabric-api 0.128.1+1.21.5
+	   |-- fabric-api-base 0.4.62+73a52b4b49
+	   |-- fabric-api-lookup-api-v1 1.6.96+86c3a9f149
+	   |-- fabric-biome-api-v1 16.0.7+2dd063df49
+	   |-- fabric-block-api-v1 1.1.0+ed91556f49
+	   |-- fabric-block-view-api-v2 1.0.26+aa6d566c49
+	   |-- fabric-blockrenderlayer-v1 2.0.16+86c3a9f149
+	   |-- fabric-client-tags-api-v1 1.1.37+86c3a9f149
+	   |-- fabric-command-api-v1 1.2.70+f71b366f49
+	   |-- fabric-command-api-v2 2.2.49+73a52b4b49
+	   |-- fabric-commands-v0 0.2.87+df3654b349
+	   |-- fabric-content-registries-v0 10.0.14+3e6c1f7d49
+	   |-- fabric-convention-tags-v1 2.1.33+7f945d5b49
+	   |-- fabric-convention-tags-v2 2.15.2+6d9989f349
+	   |-- fabric-crash-report-info-v1 0.3.12+86c3a9f149
+	   |-- fabric-data-attachment-api-v1 1.8.5+6d9989f349
+	   |-- fabric-data-generation-api-v1 22.5.2+a0fab30c49
+	   |-- fabric-dimensions-v1 4.0.17+3e6c1f7d49
+	   |-- fabric-entity-events-v1 2.1.0+3ce7866349
+	   |-- fabric-events-interaction-v0 4.0.15+64e3057949
+	   |-- fabric-game-rule-api-v1 1.0.70+c327076a49
+	   |-- fabric-item-api-v1 11.4.1+e46fd76a49
+	   |-- fabric-item-group-api-v1 4.2.9+3459fc6149
+	   |-- fabric-key-binding-api-v1 1.0.63+ecf51cdc49
+	   |-- fabric-keybindings-v0 0.2.61+df3654b349
+	   |-- fabric-lifecycle-events-v1 2.6.0+230071a049
+	   |-- fabric-loot-api-v2 3.0.48+3f89f5a549
+	   |-- fabric-loot-api-v3 1.0.36+86c3a9f149
+	   |-- fabric-message-api-v1 6.1.0+fe971bba49
+	   |-- fabric-model-loading-api-v1 5.2.3+5281b90749
+	   |-- fabric-networking-api-v1 4.5.0+775be32c49
+	   |-- fabric-object-builder-api-v1 21.1.2+b8d6ba7049
+	   |-- fabric-particles-v1 4.1.2+112e550e49
+	   |-- fabric-recipe-api-v1 8.1.8+3235ab3249
+	   |-- fabric-registry-sync-v0 6.1.22+cd64004349
+	   |-- fabric-renderer-api-v1 6.1.2+bdf4842249
+	   |-- fabric-renderer-indigo 3.1.2+5281b90749
+	   |-- fabric-rendering-data-attachment-v1 0.3.64+73761d2e49
+	   |-- fabric-rendering-fluids-v1 3.1.27+86c3a9f149
+	   |-- fabric-rendering-v1 11.3.0+a272b33849
+	   |-- fabric-resource-conditions-api-v1 5.0.21+73a52b4b49
+	   |-- fabric-resource-loader-v0 3.1.7+847e5f5c49
+	   |-- fabric-screen-api-v1 2.0.46+86c3a9f149
+	   |-- fabric-screen-handler-api-v1 1.3.129+c327076a49
+	   |-- fabric-sound-api-v1 1.0.38+86c3a9f149
+	   |-- fabric-tag-api-v1 1.0.17+ecf51cdc49
+	   |-- fabric-transfer-api-v1 5.4.24+7b20cbb049
+	   \-- fabric-transitive-access-wideners-v1 6.3.17+f17a180c49
+	- fabric-language-kotlin 1.13.4+kotlin.2.2.0
+	   |-- org_jetbrains_kotlin_kotlin-reflect 2.2.0
+	   |-- org_jetbrains_kotlin_kotlin-stdlib 2.2.0
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk7 2.2.0
+	   |-- org_jetbrains_kotlin_kotlin-stdlib-jdk8 2.2.0
+	   |-- org_jetbrains_kotlinx_atomicfu-jvm 0.28.0
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-coroutines-jdk8 1.10.2
+	   |-- org_jetbrains_kotlinx_kotlinx-datetime-jvm 0.6.2
+	   |-- org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm 0.7.0
+	   |-- org_jetbrains_kotlinx_kotlinx-io-core-jvm 0.7.0
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm 1.8.1
+	   |-- org_jetbrains_kotlinx_kotlinx-serialization-core-jvm 1.8.1
+	   \-- org_jetbrains_kotlinx_kotlinx-serialization-json-jvm 1.8.1
+	- fabricloader 0.16.14
+	   \-- mixinextras 0.4.1
+	- ferritecore 8.0.0
+	- gammautils 2.2.5
+	- hypixel-compare 1.0.0
+	- immediatelyfast 1.9.5+1.21.5
+	   \-- net_lenni0451_reflect 1.3.4
+	- iris 1.8.11+mc1.21.5
+	   |-- io_github_douira_glsl-transformer 2.0.1
+	   |-- org_anarres_jcpp 1.4.14
+	   \-- org_antlr_antlr4-runtime 4.13.1
+	- java 21
+	- lithium 0.16.3+mc1.21.5
+	- minecraft 1.21.5
+	- modelfix 1.21.5-1.12
+	- modmenu 14.0.0-rc.2
+	- placeholder-api 2.6.4+1.21.5
+	- reeses-sodium-options 1.8.3+mc1.21.4
+	- roughlyenoughitems 19.0.809
+	   \-- error_notifier 1.0.11
+	- skyblocker 5.4.0+1.21.5
+	   |-- hm-api 1.0.1+1.21.2
+	   |-- meteordevelopment_discord-ipc 1.1
+	   |-- moe_nea_neurepoparser 1.6.0
+	   |-- net_azureaaron_legacy-item-dfu 1.0.3+1.21.5
+	   |-- net_azureaaron_networth-calculator 1.0.5
+	   |-- org_apache_commons_commons-math3 3.6.1
+	   |-- org_apache_commons_commons-text 1.13.0
+	   \-- org_eclipse_jgit_org_eclipse_jgit 7.1.0.202411261347-r
+	- skyblocker-modpack-lib 1.0.0
+	- sodium 0.6.13+mc1.21.5
+	- sodium-extra 0.6.3+mc1.21.5
+	- tooltipscroll 1.4.0+1.21.3
+	   \-- lilylib 2.0.0+1.21.3
+	- yet_another_config_lib_v3 3.7.1+1.21.5-fabric
+	   |-- com_twelvemonkeys_common_common-image 3.12.0
+	   |-- com_twelvemonkeys_common_common-io 3.12.0
+	   |-- com_twelvemonkeys_common_common-lang 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-core 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-metadata 3.12.0
+	   |-- com_twelvemonkeys_imageio_imageio-webp 3.12.0
+	   |-- org_quiltmc_parsers_gson 0.2.1
+	   \-- org_quiltmc_parsers_json 0.2.1
+	- yosbr 0.1.2
+	- zoomify 2.14.2+1.21.3
+	   \-- com_akuleshov7_ktoml-core-jvm 0.5.2
+[19:28:21] [main/INFO]: Applying default options... (YOSBR)
+[19:28:21] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/theor/AppData/Roaming/PrismLauncher/libraries/net/fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/sponge-mixin-0.15.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[19:28:21] [main/INFO]: Compatibility level set to JAVA_21
+[19:28:22] [main/WARN]: Reference map 'hypixel-compare.refmap.json' for hypixel-compare.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris-fabric.refmap.json' for mixins.iris.fabric.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for iris-batched-entity-rendering.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fantastic.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.vertexformat.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.bettermipmaps.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.compat.sodium.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'iris.refmap.json' for mixins.iris.fixes.maxfpscrash.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Mod 'ferritecore' attempted to override option 'mixin.alloc.blockstate', which doesn't exist, ignoring
+[19:28:22] [main/INFO]: Loaded configuration file for Lithium: 157 options available, 0 override(s) found.
+[19:28:22] [main/INFO]: Loaded configuration file for Sodium: 43 options available, 1 override(s) found
+[19:28:22] [main/INFO]: Loaded configuration file for Sodium Extra: 34 options available, 0 override(s) found
+[19:28:22] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:28:22] [main/WARN]: Force-disabling mixin 'features.render.world.sky.FogRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[19:28:22] [main/WARN]: Force-disabling mixin 'features.render.world.sky.ClientLevelMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[19:28:22] [main/WARN]: Force-disabling mixin 'features.render.world.sky.LevelRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [iris]) disables it and children
+[19:28:22] [main/WARN]: Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
+[19:28:22] [main/INFO]: Searching for graphics cards...
+[19:28:23] [main/INFO]: Found graphics adapter: AdapterInfo{vendor=AMD, description='AMD Radeon RX 7900 XTX', adapterType=0x0000230B, openglIcdFilePath='C:\WINDOWS\System32\DriverStore\FileRepository\u0416003.inf_amd64_706cc64a85ddf686\B415817\atig6pxx.dll', openglIcdVersion=32.0.21013.1000}
+[19:28:23] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[19:28:25] [Datafixer Bootstrap/INFO]: 263 Datafixer optimizations took 916 milliseconds
+[19:28:29] [Render thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:28:29] [Render thread/INFO]: Setting user: kr3mil
+[19:28:30] [Render thread/INFO]: Hypixel Compare mod initialized!
+[19:28:30] [Render thread/INFO]: [REI] Config loaded
+[19:28:30] [Render thread/INFO]: Registering S2C receiver with id roughlyenoughitems:request_tags_s2c
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:request_tags_c2s
+[19:28:30] [Render thread/INFO]: [REI] Registered plugin provider DefaultPlugin [roughlyenoughitems] for REICommonPlugin
+[19:28:30] [Render thread/INFO]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REICommonPlugin
+[19:28:30] [Render thread/INFO]: [REI] Registered plugin provider FabricFluidAPISupportPlugin for REICommonPlugin
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:delete_item
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_grab
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_hotbar
+[19:28:30] [Render thread/INFO]: Registering C2S receiver with id roughlyenoughitems:move_items_new
+[19:28:30] [Render thread/INFO]: Deserializing AaronModConfig from 'C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\aaron-mod.json'
+[19:28:30] [Render thread/INFO]: Registering S2C receiver with id architectury:spawn_entity_packet
+[19:28:30] [Render thread/INFO]: [Config.read] Loaded config info from 'C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\chatpatches.json'!
+[19:28:30] [Render thread/INFO]: [Config.write] Saved config info to 'C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\chatpatches.json'!
+[19:28:30] [Render thread/INFO]: [ChatPatches()] Finished setting up!
+[19:28:30] [Render thread/INFO]: [Indigo] Different rendering plugin detected; not applying Indigo.
+[19:28:30] [Render thread/INFO]: Hypixel Compare client initialized!
+[19:28:30] [Render thread/INFO]: Loaded config modelfix-client.json
+[19:28:31] [Render thread/INFO]: Checking mod updates...
+[19:28:31] [Render thread/INFO]: [REI] Registered plugin provider DefaultClientPlugin [roughlyenoughitems] for REIClientPlugin
+[19:28:31] [Render thread/INFO]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
+[19:28:31] [Render thread/INFO]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
+[19:28:31] [Render thread/INFO]: [REI] Registered plugin provider SkyblockerREIClientPlugin [skyblocker] for REIClientPlugin
+[19:28:31] [Render thread/INFO]: Registering S2C receiver with id roughlyenoughitems:ci_msg
+[19:28:31] [Render thread/INFO]: Registering S2C receiver with id roughlyenoughitems:og_not_enough
+[19:28:31] [Render thread/INFO]: Registering S2C receiver with id roughlyenoughitems:sync_displays
+[19:28:31] [Render thread/INFO]: [Skyblocker Config] Successfully loaded the config file from C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\skyblocker.json.
+[19:28:31] [Render thread/INFO]: [Skyblocker Config] Successfully saved config file to C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\skyblocker.json.
+[19:28:31] [ForkJoinPool.commonPool-worker-3/WARN]: [Skyblocker Chat Rules] chat rules file not found, using default rules. This is normal when using for the first time.
+[19:28:31] [Worker-Main-1/INFO]: Update available for 'skyblocker@5.4.0+1.21.5', (-> v5.5.0+1.21.5)
+[19:28:31] [ForkJoinPool.commonPool-worker-3/ERROR]: [Skyblocker Profiled Data] Failed to load data from file: C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\skyblocker\reward-trackers\powder-mining.json
+java.lang.IllegalStateException: Not a JSON object: null
+	at knot/com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81) ~[datafixerupper-8.0.16.jar:?]
+	at knot/de.hysky.skyblocker.utils.profile.ProfiledData.loadInternal(ProfiledData.java:86) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
+[19:28:31] [Worker-Main-1/INFO]: Update available for 'entityculling@1.8.0', (-> 1.8.1)
+[19:28:31] [Worker-Main-1/INFO]: Update available for 'immediatelyfast@1.9.5+1.21.5', (-> 1.9.6+1.21.5-fabric)
+[19:28:31] [ForkJoinPool.commonPool-worker-5/INFO]: [Skyblocker] Loaded 12 command shortcuts and 3 command argument shortcuts
+[19:28:31] [Render thread/ERROR]: [Skyblocker Waypoints] Encountered exception while loading legacy ordered waypoints
+java.nio.file.NoSuchFileException: C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\skyblocker\ordered_waypoints.json
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234) ~[?:?]
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379) ~[?:?]
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431) ~[?:?]
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?]
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159) ~[?:?]
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2897) ~[?:?]
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2930) ~[?:?]
+	at knot/de.hysky.skyblocker.skyblock.waypoint.Waypoints.loadWaypoints(Waypoints.java:107) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/de.hysky.skyblocker.skyblock.waypoint.Waypoints.init(Waypoints.java:65) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/de.hysky.skyblocker.SkyblockerMod.init(SkyblockerMod.java) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/de.hysky.skyblocker.SkyblockerMod.onInitializeClient(SkyblockerMod.java:62) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53) [fabric-loader-0.16.14.jar:?]
+	at knot/net.minecraft.class_310.<init>(class_310.java:473) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:249) [client-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.16.14.jar:?]
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:105) [NewLaunch.jar:?]
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129) [NewLaunch.jar:?]
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70) [NewLaunch.jar:?]
+[19:28:31] [Render thread/INFO]: [STDOUT]: [LibGui] Initializing Client...
+[19:28:31] [Render thread/INFO]: Deserializing YACLConfig from 'C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\yacl.json5'
+[19:28:31] [ForkJoinPool.commonPool-worker-3/INFO]: [Skyblocker Player Head Hash Cache] Successfully cached the hashes of all player head items!
+[19:28:31] [ForkJoinPool.commonPool-worker-1/INFO]: [Skyblocker NEU Repo] NEU Repository Updated
+[19:28:31] [Render thread/INFO]: Backend library: LWJGL version 3.3.3-snapshot
+[19:28:32] [Render thread/INFO]: [STDOUT]: Bringing back your beloved icon since 2023!
+[19:28:32] [ForkJoinPool.commonPool-worker-3/WARN]: [Iris Update Check] This version doesn't have an update index, skipping.
+[19:28:32] [Render thread/INFO]: Initializing ImmediatelyFast 1.9.5+1.21.5 on AMD Radeon RX 7900 XTX (ATI Technologies Inc.) with OpenGL 3.2.0 Core Profile Context 25.6.1.250522
+[19:28:32] [Render thread/INFO]: Found Iris/Oculus 1.8.11+mc1.21.5. Enabling compatibility.
+[19:28:32] [Render thread/INFO]: Debug functionality is disabled.
+[19:28:32] [Render thread/INFO]: ARB_direct_state_access detected, enabling DSA.
+[19:28:32] [Render thread/INFO]: Shaders are disabled because enableShaders is set to false in iris.properties
+[19:28:32] [Render thread/INFO]: OpenGL Vendor: ATI Technologies Inc.
+[19:28:32] [Render thread/INFO]: OpenGL Renderer: AMD Radeon RX 7900 XTX
+[19:28:32] [Render thread/INFO]: OpenGL Version: 3.2.0 Core Profile Context 25.6.1.250522
+[19:28:32] [Render thread/INFO]: Using optional rendering extensions: GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[19:28:32] [ForkJoinPool.commonPool-worker-1/INFO]: [Skyblocker] Loaded 249 fairy souls across 13 locations
+[19:28:32] [Render thread/INFO]: Hardware information:
+[19:28:32] [Render thread/INFO]: CPU: 16x AMD Ryzen 7 7800X3D 8-Core Processor 
+[19:28:32] [Render thread/INFO]: GPU: AMD Radeon RX 7900 XTX (Supports OpenGL 3.2.0 Core Profile Context 25.6.1.250522)
+[19:28:32] [Render thread/INFO]: OS: Windows 11 (10.0)
+[19:28:33] [Render thread/INFO]: Reloading ResourceManager: vanilla, fabric, aaron-mod, chatpatches, cloth-config, entityculling, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, gammautils, hm-api, hypixel-compare, immediatelyfast, iris, lilylib, lithium, modmenu, org_apache_commons_commons-math3, placeholder-api, reeses-sodium-options, roughlyenoughitems, skyblocker, skyblocker-modpack-lib, sodium, sodium-extra, tooltipscroll, trender, yet_another_config_lib_v3, yosbr, zoomify, skyblocker:recolored_dungeon_items, file/skyblocker modpack.zip, aaron-mod:chroma_text
+[19:28:33] [Worker-Main-1/INFO]: Found unifont_all_no_pua-16.0.01.hex, loading
+[19:28:34] [ForkJoinPool.commonPool-worker-7/INFO]: [Skyblocker] Loaded relics locations
+[19:28:34] [Render thread/INFO]: [Skyblocker Dungeon Secrets] Started loading dungeon secrets in (blocked main thread for) 10 ms
+[19:28:34] [Worker-Main-2/INFO]: Found unifont_jp_patch-16.0.01.hex, loading
+[19:28:34] [ForkJoinPool.commonPool-worker-8/INFO]: [Skyblocker Dungeon Secrets] Loaded dungeon secrets for 1 dungeon(s), 8 room shapes, 132 rooms, and 0 custom secret waypoints total in 858 ms
+[19:28:35] [ForkJoinPool.commonPool-worker-12/WARN]: [Skyblocker Scheduler] Called the scheduler from the de.hysky.skyblocker.utils.ApiAuthentication class on the ForkJoinPool.commonPool-worker-12 thread. This will be unsupported in the future.
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler2 in minecraft:pipeline/energy_swirl
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/energy_swirl
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/entity_no_outline
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler2 in minecraft:pipeline/eyes
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/eyes
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/armor_translucent
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/armor_cutout_no_cull
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/armor_decal_cutout_no_cull
+[19:28:35] [Render thread/WARN]: Found unknown and unsupported uniform Sampler1 in minecraft:pipeline/breeze_wind
+[19:28:35] [Render thread/WARN]: Resource pack aaron-mod:chroma_text is not compatible with font atlas resizing. Temporarily disabling font atlas resizing.
+[19:28:35] [Render thread/WARN]: Resource pack aaron-mod:chroma_text is not compatible with HUD batching. Temporarily disabling HUD batching.
+[19:28:35] [Render thread/INFO]: OpenAL initialized on device OpenAL Soft on Realtek Digital Output (Realtek USB Audio)
+[19:28:35] [Render thread/INFO]: Sound engine started
+[19:28:35] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/mob_effects.png-atlas
+[19:28:35] [Render thread/INFO]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[19:28:35] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[19:28:41] [Render thread/INFO]: Connecting to hypixel.net, 25565
+[19:28:43] [Render thread/INFO]: Reloading pipeline on dimension change: minecraft:overworld => minecraft:overworld
+[19:28:43] [Render thread/INFO]: Destroying pipeline minecraft:overworld
+[19:28:43] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[19:28:43] [Render thread/INFO]: Started 10 worker threads
+[19:28:43] [Render thread/INFO]: [ChatLog.deserialize] Reading...
+[19:28:43] [Render thread/INFO]: [ChatLog.deserialize] Parsed 16384 messages and 145 sent messages!
+[19:28:43] [Render thread/INFO]: [ChatLog.deserialize] Took 0.232 seconds
+[19:28:44] [Render thread/INFO]: [ChatLog.restore] Restored 16384 messages and 145 history messages!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] §8[§rMinecraft Server§8]
+[19:28:44] [Render thread/WARN]: Ambiguity between arguments [skyblocker, custom, renameItem, textComponent] and [skyblocker, custom, renameItem, basicText] with inputs: ["", "hello world", {text:"hello world"}, 'hello world', [""]]
+[19:28:44] [Render thread/WARN]: Ambiguity between arguments [skyblocker, custom, renameItem, basicText] and [skyblocker, custom, renameItem, textComponent] with inputs: [words with spaces, "and symbols", word]
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44]                          
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §b[MVP§a+§b] kr3mil§f §6joined the lobby!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §b[MVP§9+§b] Denalll§f §6joined the lobby!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §aYou have §b15 §aunclaimed leveling rewards!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §eClick here to view them!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §aYou have §66 §aunclaimed achievement rewards!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44] §eClick here to view them!
+[19:28:44] [Render thread/INFO]: [System] [CHAT] [19:28:44]  §b>§c>§a>§r §b[MVP§5++§b] NotDragons§f §6joined the lobby! §a<§c<§b<
+[19:28:45] [Render thread/INFO]: [System] [CHAT] [19:28:45] \n➔ Welcome to the Prototype Lobby\nAll games in this lobby are currently in development.\nClick here to leave feedback! ➤ https://hypixel.net/PTL\n
+[19:28:46] [Render thread/INFO]: [System] [CHAT] [19:28:46]   ➤ You have reached your Hype limit! Add Hype to Prototype Lobby minigames by right-clicking with the Hype Diamond!
+[19:28:46] [Render thread/INFO]: [System] [CHAT] [19:28:46] Sending to server mega12E...
+[19:28:46] [Render thread/INFO]: Reloading pipeline on dimension change: minecraft:overworld => minecraft:overworld
+[19:28:46] [Render thread/INFO]: Destroying pipeline minecraft:overworld
+[19:28:46] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:46] [Render thread/WARN]: Ambiguity between arguments [skyblocker, custom, renameItem, textComponent] and [skyblocker, custom, renameItem, basicText] with inputs: ["", "hello world", {text:"hello world"}, 'hello world', [""]]
+[19:28:46] [Render thread/WARN]: Ambiguity between arguments [skyblocker, custom, renameItem, basicText] and [skyblocker, custom, renameItem, textComponent] with inputs: [words with spaces, "and symbols", word]
+[19:28:46] [Render thread/INFO]: Reloading pipeline on dimension change: minecraft:overworld => hypixel:dimension_switch
+[19:28:46] [Render thread/INFO]: Destroying pipeline minecraft:overworld
+[19:28:46] [Render thread/INFO]: Creating pipeline for dimension hypixel:dimension_switch
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:46] [Render thread/INFO]: Reloading pipeline on dimension change: hypixel:dimension_switch => minecraft:overworld
+[19:28:46] [Render thread/INFO]: Destroying pipeline hypixel:dimension_switch
+[19:28:46] [Render thread/INFO]: Creating pipeline for dimension minecraft:overworld
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:46] [Render thread/INFO]: Stopping worker threads
+[19:28:46] [Render thread/INFO]: Started 10 worker threads
+[19:28:47] [Render thread/INFO]: [System] [CHAT] [19:28:47] You haven't claimed your Summer Rewards yet!
+[19:28:47] [Render thread/INFO]: [System] [CHAT] [19:28:47] Talk to the Summer Sloth in the Hub!
+[19:28:47] [Render thread/INFO]: [System] [CHAT] [19:28:47]        
+[19:28:47] [Render thread/INFO]: [System] [CHAT] [19:28:47] [Skyblocker] §aTip: Open your accessory bag and Skyblocker will remember them. The accessory helper will tell you what accessories you have and what accessories are missing.\n §b[Click for Previous Tip] §a[Click for Next Tip] §c[Click to Disable Tips]
+[19:28:47] [Render thread/INFO]: [Skyblocker] Successfully cached all armor trims!
+[19:28:47] [Render thread/WARN]: [REI] Found 1 existing reload task(s) after trying to terminate them!
+[19:28:47] [ForkJoinPool.commonPool-worker-7/INFO]: [Skyblocker] Discord RPC connected successfully
+[19:28:47] [ForkJoinPool.commonPool-worker-1/INFO]: [Skyblocker] Mayor set to Marina, minister set to Diaz.
+[19:28:47] [ForkJoinPool.commonPool-worker-1/WARN]: [Skyblocker Scheduler] Called the scheduler from the de.hysky.skyblocker.utils.scheduler.Scheduler class on the ForkJoinPool.commonPool-worker-1 thread. This will be unsupported in the future.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REICommonPlugin starting main-reload for START.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] Plugins (3):
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (-100.00) DefaultPlugin of DefaultPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) FabricFluidAPISupportPlugin
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [ForkJoinPool.commonPool-worker-5/INFO]: [System] [CHAT] [19:28:47] [Skyblocker] There's a new Skyblocker update available! Skyblocker 5.5.0 for 1.21.5
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REIClientPlugin starting main-reload for START.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] Plugins (4):
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (-100.00) DefaultClientPlugin of DefaultClientPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) SkyblockerREIClientPlugin of SkyblockerREIClientPlugin [skyblocker]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [ForkJoinPool.commonPool-worker-15/INFO]: [Skyblocker WebSocket] Successfully connected to the Skyblocker WebSocket!
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REICommonPlugin finished post-reload for START in 1.943 ms, totaling 237.9 ms.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REIClientPlugin finished post-reload for START in 812.3 μs, totaling 350.6 ms.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REICommonPlugin starting main-reload for END.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] Plugins (3):
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (-100.00) DefaultPlugin of DefaultPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) FabricFluidAPISupportPlugin
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ++++++++++++++++++++++++++++++++++++++++
+[19:28:47] [REI-ReloadPlugins/ERROR]: [REI] Failed to run end-reload task for reloadable [ServerDisplayRegistryImpl] in stage [END]
+java.lang.NullPointerException: Cannot invoke "net.minecraft.server.MinecraftServer.method_3772()" because the return value of "dev.architectury.utils.GameInstance.getServer()" is null
+	at knot/me.shedaniel.rei.impl.common.registry.displays.ServerDisplayRegistryImpl.getAllSortedRecipes(ServerDisplayRegistryImpl.java:230) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.registry.displays.ServerDisplayRegistryImpl.fillRecipes(ServerDisplayRegistryImpl.java:216) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.registry.displays.ServerDisplayRegistryImpl.endReload(ServerDisplayRegistryImpl.java:209) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.api.common.registry.Reloadable.endReload(Reloadable.java:47) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.reload(PluginManagerImpl.java:464) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.plugins.ReloadManagerImpl.reloadPlugins0(ReloadManagerImpl.java:155) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.plugins.ReloadManagerImpl.reloadPlugins0(ReloadManagerImpl.java:144) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at knot/me.shedaniel.rei.impl.common.plugins.ReloadManagerImpl.lambda$reloadPlugins$7(ReloadManagerImpl.java:122) ~[RoughlyEnoughItems-19.0.809-fabric.jar:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ========================================
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] REIClientPlugin starting main-reload for END.
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] Plugins (4):
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (-100.00) DefaultClientPlugin of DefaultClientPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) SkyblockerREIClientPlugin of SkyblockerREIClientPlugin [skyblocker]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI]  - (0.00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[19:28:47] [REI-ReloadPlugins/INFO]: [REI] ========================================
+[19:28:48] [REI-Cache-0/WARN]: [Skyblocker] §cItem price information on tooltip will renew in max 60 seconds. If not, check latest.log
+[19:28:48] [REI-Cache-1/WARN]: [Skyblocker] §cItem price information on tooltip will renew in max 60 seconds. If not, check latest.log
+[19:28:48] [Render thread/INFO]: [System] [CHAT] [19:28:48] §6HUNT §e- Your trap on §bGalatea §ecaught an §aEnt Shard§e!
+[19:28:48] [Render thread/INFO]: [System] [CHAT] [19:28:48] §7[§eClick here to collect it.§7]
+[19:28:48] [REI-ReloadPlugins/INFO]: [REI] REICommonPlugin finished post-reload for END in 167.9 μs, totaling 19.51 ms.
+[19:28:48] [REI-ReloadPlugins/INFO]: [REI] REIClientPlugin finished post-reload for END in 1.395 ms, totaling 490.8 ms.
+[19:28:49] [Render thread/INFO]: M key pressed in inventory! Screen: SkyblockInventoryScreen
+[19:28:49] [Render thread/INFO]: [STDOUT]: DEBUG: Mouse position - X: 465.5, Y: 309.5
+[19:28:49] [Render thread/INFO]: [STDOUT]: DEBUG: Reflection failed: net.minecraft.class_465.getSlotAt(double,double)
+[19:28:49] [Render thread/INFO]: [STDOUT]: DEBUG: Found slot with method: method_64240
+[19:28:49] [Render thread/INFO]: [System] [CHAT] [19:28:49] First item selected: Magnetic Mithril Pickaxe
+[19:28:49] [Render thread/INFO]: [System] [CHAT] [19:28:49] 
+[19:28:49] [Render thread/INFO]: [System] [CHAT] [19:28:49] Welcome to Hypixel SkyBlock!
+[19:28:49] [Render thread/INFO]: [System] [CHAT] [19:28:49] 
+[19:28:49] [Render thread/INFO]: [System] [CHAT] [19:28:49] §eLatest update: §bSkyBlock v0.23.1 §e§lCLICK
+[19:28:50] [Render thread/INFO]: [System] [CHAT] [19:28:50] §aYou are playing on profile: §ePeach
+[19:28:50] [Render thread/INFO]: [System] [CHAT] [19:28:50] Profile ID: 76ce9488-e2af-4e8c-9b70-1e35e029f956
+[19:28:51] [Render thread/INFO]: M key pressed in inventory! Screen: SkyblockInventoryScreen
+[19:28:51] [Render thread/INFO]: [STDOUT]: DEBUG: Mouse position - X: 463.5, Y: 286.5
+[19:28:51] [Render thread/INFO]: [STDOUT]: DEBUG: Reflection failed: net.minecraft.class_465.getSlotAt(double,double)
+[19:28:51] [Render thread/INFO]: [STDOUT]: DEBUG: Found slot with method: method_64240
+[19:28:51] [Render thread/INFO]: === CREATING COMPARISON SCREEN ===
+[19:28:51] [Render thread/INFO]: First item: Magnetic Mithril Pickaxe
+[19:28:51] [Render thread/INFO]: Second item: Magnetic Lapis Pickaxe
+[19:28:51] [Render thread/INFO]: === PARSING ITEM: Magnetic Mithril Pickaxe ===
+[19:28:51] [Render thread/INFO]: Total lore lines: 34
+[19:28:51] [Render thread/INFO]: Line 0: 'Magnetic Mithril Pickaxe'
+[19:28:51] [Render thread/INFO]: Line 1: 'Breaking Power 5'
+[19:28:51] [Render thread/INFO]: Line 2: ''
+[19:28:51] [Render thread/INFO]: Line 3: 'Damage: +40'
+[19:28:51] [Render thread/INFO]: Specific stat found: Damage = 40 (pattern matched)
+[19:28:51] [Render thread/INFO]: Line 4: 'Mining Speed: +320 (+20)'
+[19:28:51] [Render thread/INFO]: Specific stat found: Speed = 320 (pattern matched)
+[19:28:51] [Render thread/INFO]: Line 5: 'Mining Fortune: +37'
+[19:28:51] [Render thread/INFO]: Line 6: ''
+[19:28:51] [Render thread/INFO]: Line 7: 'Efficiency V'
+[19:28:51] [Render thread/INFO]: Line 8: 'Increases how quickly your tool'
+[19:28:51] [Render thread/INFO]: Line 9: 'breaks blocks.'
+[19:28:51] [Render thread/INFO]: Line 10: 'Experience III'
+[19:28:51] [Render thread/INFO]: Line 11: 'Grants a 37.5% chance for mobs and'
+[19:28:51] [Render thread/INFO]: Line 12: 'ores to drop double experience.'
+[19:28:51] [Render thread/INFO]: Line 13: 'Fortune III'
+[19:28:51] [Render thread/INFO]: Line 14: 'Grants +30☘ Mining Fortune, which'
+[19:28:51] [Render thread/INFO]: Line 15: 'increases your chance for multiple'
+[19:28:51] [Render thread/INFO]: Line 16: 'drops.'
+[19:28:51] [Render thread/INFO]: Line 17: ''
+[19:28:51] [Render thread/INFO]: Line 18: 'Ability: Mining Speed Boost  RIGHT CLICK'
+[19:28:51] [Render thread/INFO]: Found rarity (plain): RIGHT
+[19:28:51] [Render thread/INFO]: Line 19: 'Grants +200% ⸕ Mining Speed for'
+[19:28:51] [Render thread/INFO]: Line 20: '10s.'
+[19:28:51] [Render thread/INFO]: Line 21: 'Cooldown: 120s'
+[19:28:51] [Render thread/INFO]: Line 22: ''
+[19:28:51] [Render thread/INFO]: Line 23: 'Magnetic Bonus'
+[19:28:51] [Render thread/INFO]: Line 24: 'Earn +35% more Exp when mining.'
+[19:28:51] [Render thread/INFO]: Line 25: ''
+[19:28:51] [Render thread/INFO]: Line 26: 'UNCOMMON PICKAXE'
+[19:28:51] [Render thread/INFO]: Found rarity (plain): UNCOMMON
+[19:28:51] [Render thread/INFO]: Line 27: 'NPC Sell Price:      400.0 Coins'
+[19:28:51] [Render thread/INFO]: Line 28: 'Lowest BIN Price:  1,000,000.0 Coins'
+[19:28:51] [Render thread/INFO]: Line 29: '1 Day Avg. Price:  922,706.8 Coins'
+[19:28:51] [Render thread/INFO]: Line 30: '3 Day Avg. Price:  922,706.6 Coins'
+[19:28:51] [Render thread/INFO]: Line 31: 'Est. Item Value:    1,000,066.8 Coins'
+[19:28:51] [Render thread/INFO]: Line 32: 'Obtained:            July 5, 2025'
+[19:28:51] [Render thread/INFO]: Line 33: 'Museum (Rarities):  ✖ Not Donated'
+[19:28:51] [Render thread/INFO]: Final parsed stats: {Speed=320, Damage=40}
+[19:28:51] [Render thread/INFO]: === END PARSING ===
+[19:28:51] [Render thread/INFO]: === PARSING ITEM: Magnetic Lapis Pickaxe ===
+[19:28:51] [Render thread/INFO]: Total lore lines: 38
+[19:28:51] [Render thread/INFO]: Line 0: 'Magnetic Lapis Pickaxe'
+[19:28:51] [Render thread/INFO]: Line 1: 'Breaking Power 4'
+[19:28:51] [Render thread/INFO]: Line 2: ''
+[19:28:51] [Render thread/INFO]: Line 3: 'Damage: +20'
+[19:28:51] [Render thread/INFO]: Specific stat found: Damage = 20 (pattern matched)
+[19:28:51] [Render thread/INFO]: Line 4: 'Mining Speed: +220 (+20)'
+[19:28:51] [Render thread/INFO]: Specific stat found: Speed = 220 (pattern matched)
+[19:28:51] [Render thread/INFO]: Line 5: 'Mining Fortune: +30'
+[19:28:51] [Render thread/INFO]: Line 6: ''
+[19:28:51] [Render thread/INFO]: Line 7: 'Efficiency V'
+[19:28:51] [Render thread/INFO]: Line 8: 'Increases how quickly your tool'
+[19:28:51] [Render thread/INFO]: Line 9: 'breaks blocks.'
+[19:28:51] [Render thread/INFO]: Line 10: 'Experience III'
+[19:28:51] [Render thread/INFO]: Line 11: 'Grants a 37.5% chance for mobs and'
+[19:28:51] [Render thread/INFO]: Line 12: 'ores to drop double experience.'
+[19:28:51] [Render thread/INFO]: Line 13: 'Fortune III'
+[19:28:51] [Render thread/INFO]: Line 14: 'Grants +30☘ Mining Fortune, which'
+[19:28:51] [Render thread/INFO]: Line 15: 'increases your chance for multiple'
+[19:28:51] [Render thread/INFO]: Line 16: 'drops.'
+[19:28:51] [Render thread/INFO]: Line 17: ''
+[19:28:51] [Render thread/INFO]: Line 18: 'Grants a 25% chance to gain double'
+[19:28:51] [Render thread/INFO]: Line 19: 'experience when mining ores.'
+[19:28:51] [Render thread/INFO]: Line 20: ''
+[19:28:51] [Render thread/INFO]: Line 21: 'Ability: Mining Speed Boost  RIGHT CLICK'
+[19:28:51] [Render thread/INFO]: Found rarity (plain): RIGHT
+[19:28:51] [Render thread/INFO]: Line 22: 'Grants +200% ⸕ Mining Speed for'
+[19:28:51] [Render thread/INFO]: Line 23: '10s.'
+[19:28:51] [Render thread/INFO]: Line 24: 'Cooldown: 120s'
+[19:28:51] [Render thread/INFO]: Line 25: ''
+[19:28:51] [Render thread/INFO]: Line 26: 'Magnetic Bonus'
+[19:28:51] [Render thread/INFO]: Line 27: 'Earn +35% more Exp when mining.'
+[19:28:51] [Render thread/INFO]: Line 28: ''
+[19:28:51] [Render thread/INFO]: Line 29: 'UNCOMMON PICKAXE'
+[19:28:51] [Render thread/INFO]: Found rarity (plain): UNCOMMON
+[19:28:51] [Render thread/INFO]: Line 30: 'NPC Sell Price:      256.0 Coins'
+[19:28:51] [Render thread/INFO]: Line 31: 'Lowest BIN Price:  50,000.0 Coins'
+[19:28:51] [Render thread/INFO]: Line 32: '1 Day Avg. Price:  535,579.3 Coins'
+[19:28:51] [Render thread/INFO]: Line 33: '3 Day Avg. Price:  535,580.4 Coins'
+[19:28:51] [Render thread/INFO]: Line 34: 'Crafting Price:     567.2 Coins'
+[19:28:51] [Render thread/INFO]: Line 35: 'Est. Item Value:    50,066.8 Coins'
+[19:28:51] [Render thread/INFO]: Line 36: 'Obtained:            July 4, 2025'
+[19:28:51] [Render thread/INFO]: Line 37: 'Museum (Rarities):  ✖ Not Donated'
+[19:28:51] [Render thread/INFO]: Final parsed stats: {Speed=220, Damage=20}
+[19:28:51] [Render thread/INFO]: === END PARSING ===
+[19:28:51] [Render thread/INFO]: First stats count: 2
+[19:28:51] [Render thread/INFO]: Second stats count: 2
+[19:28:57] [Render thread/INFO]: [ChatLog.serialize] Saving...
+[19:28:57] [Render thread/INFO]: [ChatLog.serialize] Saved 16385 messages and 145 sent messages to 'C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\logs\chatlog.json'!
+[19:28:57] [Render thread/INFO]: [ChatLog.serialize] Took 0.381 seconds
+[19:28:58] [ForkJoinPool.commonPool-worker-4/INFO]: [Skyblocker] Discord RPC disconnected
+[19:28:58] [Render thread/INFO]: Stopping worker threads
+[19:28:59] [Render thread/INFO]: Stopping!
+[19:28:59] [CullThread/INFO]: [STDOUT]: Shutting down culling task!
+[19:28:59] [Render thread/INFO]: [Skyblocker] Saved hud widget config
+[19:28:59] [Render thread/INFO]: [Skyblocker Dungeon Secrets] Saved custom dungeon secret waypoints
+[19:28:59] [Render thread/ERROR]: [Skyblocker Profiled Data] Failed to save data to file: C:\Users\theor\AppData\Roaming\PrismLauncher\instances\Skyblocker Modpack - Hypixel Skyblock\minecraft\config\skyblocker\reward-trackers\powder-mining.json
+java.lang.NullPointerException: Cannot invoke "com.mojang.serialization.Codec.encodeStart(com.mojang.serialization.DynamicOps, Object)" because the return value of "com.mojang.serialization.codecs.BaseMapCodec.elementCodec()" is null
+	at knot/com.mojang.serialization.codecs.BaseMapCodec.encode(BaseMapCodec.java:62) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.codecs.UnboundedMapCodec.encode(UnboundedMapCodec.java:27) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.codecs.UnboundedMapCodec.encode(UnboundedMapCodec.java:16) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Encoder$1.encode(Encoder.java:25) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Codec$2.encode(Codec.java:80) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Encoder.encodeStart(Encoder.java:14) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.codecs.BaseMapCodec.encode(BaseMapCodec.java:62) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.codecs.UnboundedMapCodec.encode(UnboundedMapCodec.java:27) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.codecs.UnboundedMapCodec.encode(UnboundedMapCodec.java:16) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Encoder$1.encode(Encoder.java:25) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Codec$2.encode(Codec.java:80) ~[datafixerupper-8.0.16.jar:?]
+	at knot/com.mojang.serialization.Encoder.encodeStart(Encoder.java:14) ~[datafixerupper-8.0.16.jar:?]
+	at knot/de.hysky.skyblocker.utils.profile.ProfiledData.saveInternal(ProfiledData.java:110) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/de.hysky.skyblocker.utils.profile.ProfiledData.save(ProfiledData.java:97) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/de.hysky.skyblocker.utils.profile.ProfiledData.lambda$init$0(ProfiledData.java:69) ~[skyblocker-5.4.0+1.21.5.jar:?]
+	at knot/net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents.lambda$static$2(ClientLifecycleEvents.java:47) ~[fabric-lifecycle-events-v1-2.6.0+230071a049-af563e72dcfff332.jar:?]
+	at knot/net.minecraft.class_310.handler$zmm000$fabric-lifecycle-events-v1$onStopping(class_310.java:6063) [client-intermediary.jar:?]
+	at knot/net.minecraft.class_310.method_1490(class_310.java:1219) [client-intermediary.jar:?]
+	at knot/net.minecraft.client.main.Main.main(Main.java:270) [client-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.14.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.16.14.jar:?]
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:105) [NewLaunch.jar:?]
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129) [NewLaunch.jar:?]
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70) [NewLaunch.jar:?]
+[19:28:59] [Render thread/INFO]: [Skyblocker] Saved status bars config
+[19:28:59] [Render thread/INFO]: [Skyblocker] Saved 12 command shortcuts and 3 command argument shortcuts
+[19:28:59] [Render thread/INFO]: [Skyblocker] Saved found fairy souls
+[19:28:59] [Render thread/INFO]: [Skyblocker Waypoints] Saved waypoints
+Process exited with code 0.
+Clipboard copy at: 09 Jul 2025 19:29:10 +0100
