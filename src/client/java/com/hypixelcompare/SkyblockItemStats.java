@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 public class SkyblockItemStats {
     public final Map<String, Integer> stats = new HashMap<>();
     public final Set<String> percentageStats = new HashSet<>();
+    public final Map<String, Integer> enchantments = new HashMap<>();
     private final String itemName;
     private String rarity;
     private final String itemType;
@@ -20,6 +21,7 @@ public class SkyblockItemStats {
     private static final Pattern STAT_WITH_VALUE_PATTERN = Pattern.compile("([A-Za-z][A-Za-z ]+): \\+?(\\d+)(?!%)");
     private static final Pattern BREAKING_POWER_PATTERN = Pattern.compile("Breaking Power (\\d+)");
     private static final Pattern RARITY_PATTERN = Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
+    private static final Pattern ENCHANTMENT_PATTERN = Pattern.compile("([A-Za-z][A-Za-z ]+) ([IVX]+)"); // Enchantment Name I, II, III, IV, V, etc.
     
     public SkyblockItemStats(String itemName, String rarity, String itemType) {
         this.itemName = itemName;
@@ -86,6 +88,20 @@ public class SkyblockItemStats {
                     HypixelCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
                 }
             }
+            
+            // Parse enchantments
+            Matcher enchantmentMatcher = ENCHANTMENT_PATTERN.matcher(lineText);
+            if (enchantmentMatcher.find()) {
+                String enchantName = enchantmentMatcher.group(1).trim();
+                String romanLevel = enchantmentMatcher.group(2);
+                int level = romanToInt(romanLevel);
+                
+                // Skip if this is actually a stat (contains colon)
+                if (!lineText.contains(":") && !stats.enchantments.containsKey(enchantName)) {
+                    stats.enchantments.put(enchantName, level);
+                    HypixelCompare.LOGGER.info("Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
+                }
+            }
         }
         
         HypixelCompare.LOGGER.info("Final parsed stats: " + stats.stats);
@@ -99,6 +115,28 @@ public class SkyblockItemStats {
     
     public boolean isPercentageStat(String statName) {
         return percentageStats.contains(statName);
+    }
+    
+    private static int romanToInt(String roman) {
+        Map<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+        
+        int result = 0;
+        for (int i = 0; i < roman.length(); i++) {
+            int current = romanMap.get(roman.charAt(i));
+            if (i + 1 < roman.length() && current < romanMap.get(roman.charAt(i + 1))) {
+                result -= current;
+            } else {
+                result += current;
+            }
+        }
+        return result;
     }
     
     public List<String> getFormattedStats() {

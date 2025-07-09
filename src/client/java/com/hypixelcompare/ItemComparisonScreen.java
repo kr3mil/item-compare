@@ -39,27 +39,32 @@ public class ItemComparisonScreen extends Screen {
     
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        // Draw a semi-transparent dark background instead of blurred background
-        context.fill(0, 0, this.width, this.height, 0x80000000);
+        // Draw a solid dark background - no blur
+        context.fill(0, 0, this.width, this.height, 0xC0000000);
         
         int centerX = this.width / 2;
-        int startY = 30;
+        int startY = 40;
         
-        // Draw a darker panel for the comparison area
-        int panelWidth = 500;
-        int panelHeight = 400;
+        // Draw main comparison panel
+        int panelWidth = 600;
+        int panelHeight = this.height - 80;
         int panelX = centerX - panelWidth / 2;
-        int panelY = startY - 10;
-        context.fill(panelX, panelY, panelX + panelWidth, panelY + panelHeight, 0x90000000);
+        int panelY = 20;
+        context.fill(panelX, panelY, panelX + panelWidth, panelY + panelHeight, 0xE0000000);
+        
+        // Add border to panel
+        context.fill(panelX - 2, panelY - 2, panelX + panelWidth + 2, panelY + panelHeight + 2, 0xFF444444);
+        context.fill(panelX, panelY, panelX + panelWidth, panelY + panelHeight, 0xE0000000);
         
         // Update title to be more descriptive
         String titleText = "§6Item Comparison: §f" + firstItem.getName().getString() + " §7vs §f" + secondItem.getName().getString();
-        context.drawCenteredTextWithShadow(this.textRenderer, titleText, centerX, 10, 0xFFFFFF);
+        context.drawCenteredTextWithShadow(this.textRenderer, titleText, centerX, 30, 0xFFFFFF);
         
         renderItemHeader(context, centerX - 200, startY, firstItem, firstStats, "Current Item");
         renderItemHeader(context, centerX + 100, startY, secondItem, secondStats, "Compared Item");
         
-        renderStatComparison(context, centerX - 50, startY + 60);
+        int comparisonY = renderStatComparison(context, centerX, startY + 70);
+        renderEnchantmentComparison(context, centerX, comparisonY + 20);
         
         super.render(context, mouseX, mouseY, delta);
     }
@@ -75,7 +80,7 @@ public class ItemComparisonScreen extends Screen {
         context.drawTextWithShadow(this.textRenderer, rarity, x + 20, y + 35, 0xFFFFFF);
     }
     
-    private void renderStatComparison(DrawContext context, int centerX, int startY) {
+    private int renderStatComparison(DrawContext context, int centerX, int startY) {
         context.drawCenteredTextWithShadow(this.textRenderer, "§eSTAT COMPARISON", centerX, startY, 0xFFFF55);
         
         int currentY = startY + 20;
@@ -109,6 +114,8 @@ public class ItemComparisonScreen extends Screen {
             int secondValue = secondStats.getStat(stat);
             currentY += renderStatDifference(context, centerX, currentY, stat, firstValue, secondValue);
         }
+        
+        return currentY;
     }
     
     private int renderStatDifference(DrawContext context, int centerX, int y, String statName, int firstValue, int secondValue) {
@@ -118,14 +125,14 @@ public class ItemComparisonScreen extends Screen {
         
         // Base stat line
         String baseStat = "§7" + statName + ": " + statColor + firstValue + suffix;
-        context.drawTextWithShadow(this.textRenderer, baseStat, centerX - 100, y, 0xFFFFFF);
+        context.drawTextWithShadow(this.textRenderer, baseStat, centerX - 150, y, 0xFFFFFF);
         
         // Comparison arrow
-        context.drawTextWithShadow(this.textRenderer, "§7→", centerX - 10, y, 0xFFFFFF);
+        context.drawTextWithShadow(this.textRenderer, "§7→", centerX - 15, y, 0xFFFFFF);
         
         // New value with difference
         String newValue = statColor + secondValue + suffix;
-        context.drawTextWithShadow(this.textRenderer, newValue, centerX + 10, y, 0xFFFFFF);
+        context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFF);
         
         // Difference indicator
         if (difference != 0) {
@@ -140,10 +147,79 @@ public class ItemComparisonScreen extends Screen {
                 diffColor = 0xFF5555; // Red for negative
             }
             
-            context.drawTextWithShadow(this.textRenderer, diffText, centerX + 60, y, diffColor);
+            context.drawTextWithShadow(this.textRenderer, diffText, centerX + 80, y, diffColor);
         }
         
         return 12; // Line height
+    }
+    
+    private void renderEnchantmentComparison(DrawContext context, int centerX, int startY) {
+        context.drawCenteredTextWithShadow(this.textRenderer, "§dENCHANTMENTS", centerX, startY, 0xFFAA00);
+        
+        int currentY = startY + 20;
+        
+        // Get all unique enchantments from both items
+        Set<String> allEnchantments = new HashSet<>();
+        allEnchantments.addAll(firstStats.enchantments.keySet());
+        allEnchantments.addAll(secondStats.enchantments.keySet());
+        
+        if (allEnchantments.isEmpty()) {
+            context.drawCenteredTextWithShadow(this.textRenderer, "§7No enchantments found", centerX, currentY, 0xFFFFFF);
+            return;
+        }
+        
+        // Sort enchantments alphabetically
+        List<String> sortedEnchantments = new ArrayList<>(allEnchantments);
+        sortedEnchantments.sort(String::compareTo);
+        
+        // Display enchantments
+        for (String enchantment : sortedEnchantments) {
+            int firstLevel = firstStats.enchantments.getOrDefault(enchantment, 0);
+            int secondLevel = secondStats.enchantments.getOrDefault(enchantment, 0);
+            currentY += renderEnchantmentDifference(context, centerX, currentY, enchantment, firstLevel, secondLevel);
+        }
+    }
+    
+    private int renderEnchantmentDifference(DrawContext context, int centerX, int y, String enchantment, int firstLevel, int secondLevel) {
+        int difference = secondLevel - firstLevel;
+        
+        // Base enchantment line
+        String baseEnchant = "§7" + enchantment + ": §9" + (firstLevel > 0 ? intToRoman(firstLevel) : "None");
+        context.drawTextWithShadow(this.textRenderer, baseEnchant, centerX - 150, y, 0xFFFFFF);
+        
+        // Comparison arrow
+        context.drawTextWithShadow(this.textRenderer, "§7→", centerX - 15, y, 0xFFFFFF);
+        
+        // New value
+        String newValue = "§9" + (secondLevel > 0 ? intToRoman(secondLevel) : "None");
+        context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFF);
+        
+        // Difference indicator
+        if (difference != 0) {
+            String diffText;
+            int diffColor;
+            
+            if (difference > 0) {
+                diffText = " (+" + difference + ")";
+                diffColor = 0x55FF55; // Green for positive
+            } else {
+                diffText = " (" + difference + ")";
+                diffColor = 0xFF5555; // Red for negative
+            }
+            
+            context.drawTextWithShadow(this.textRenderer, diffText, centerX + 80, y, diffColor);
+        }
+        
+        return 12; // Line height
+    }
+    
+    private String intToRoman(int num) {
+        if (num <= 0) return "";
+        String[] romanNumerals = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        if (num < romanNumerals.length) {
+            return romanNumerals[num];
+        }
+        return String.valueOf(num); // Fallback for numbers > 10
     }
     
     private String getRarityColor(String rarity) {
