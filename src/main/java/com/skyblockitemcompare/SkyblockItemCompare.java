@@ -1,15 +1,15 @@
-package com.hypixelcompare;
+package com.skyblockitemcompare;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class HypixelCompare implements ModInitializer {
-    public static final String MOD_ID = "hypixel-compare";
+public class SkyblockItemCompare implements ModInitializer {
+    public static final String MOD_ID = "skyblock-item-compare";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Hypixel Compare mod initialized!");
+        LOGGER.info("Skyblock Item Compare mod initialized!");
     }
 }

@@ -12,7 +12,10 @@
       "Bash(export:*)",
       "WebFetch(domain:github.com)",
       "Bash(find:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }

@@ -1,4 +1,4 @@
-package com.hypixelcompare;
+package com.skyblockitemcompare;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
@@ -19,15 +19,15 @@ public class ItemComparisonScreen extends Screen {
         this.firstItem = firstItem;
         this.secondItem = secondItem;
         
-        HypixelCompare.LOGGER.info("=== CREATING COMPARISON SCREEN ===");
-        HypixelCompare.LOGGER.info("First item: " + firstItem.getName().getString());
-        HypixelCompare.LOGGER.info("Second item: " + secondItem.getName().getString());
+        SkyblockItemCompare.LOGGER.info("=== CREATING COMPARISON SCREEN ===");
+        SkyblockItemCompare.LOGGER.info("First item: " + firstItem.getName().getString());
+        SkyblockItemCompare.LOGGER.info("Second item: " + secondItem.getName().getString());
         
         this.firstStats = SkyblockItemStats.parseItem(firstItem);
         this.secondStats = SkyblockItemStats.parseItem(secondItem);
         
-        HypixelCompare.LOGGER.info("First stats count: " + firstStats.stats.size());
-        HypixelCompare.LOGGER.info("Second stats count: " + secondStats.stats.size());
+        SkyblockItemCompare.LOGGER.info("First stats count: " + firstStats.stats.size());
+        SkyblockItemCompare.LOGGER.info("Second stats count: " + secondStats.stats.size());
     }
     
     @Override

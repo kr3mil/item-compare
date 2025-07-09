@@ -1,8 +1,0 @@
-{
-  "key.hypixel-compare.compare": "Select/Compare Item",
-  "key.hypixel-compare.reset": "Reset Selection",
-  "category.hypixel-compare.general": "Hypixel Compare",
-  "text.hypixel-compare.first_selected": "First item selected: %s",
-  "text.hypixel-compare.no_item_hovered": "No item hovered",
-  "text.hypixel-compare.selection_reset": "Selection reset"
-}

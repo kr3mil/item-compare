@@ -21,7 +21,7 @@ loom {
     splitEnvironmentSourceSets()
     
     mods {
-        "hypixel-compare" {
+        "skyblock-item-compare" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }

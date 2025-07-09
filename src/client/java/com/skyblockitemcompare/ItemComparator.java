@@ -1,4 +1,4 @@
-package com.hypixelcompare;
+package com.skyblockitemcompare;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

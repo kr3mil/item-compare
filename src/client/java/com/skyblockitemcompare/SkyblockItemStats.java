@@ -1,4 +1,4 @@
-package com.hypixelcompare;
+package com.skyblockitemcompare;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -34,25 +34,25 @@ public class SkyblockItemStats {
         String rarity = "COMMON";
         String itemType = "UNKNOWN";
         
-        HypixelCompare.LOGGER.info("=== PARSING ITEM: " + itemName + " ===");
+        SkyblockItemCompare.LOGGER.info("=== PARSING ITEM: " + itemName + " ===");
         
         SkyblockItemStats stats = new SkyblockItemStats(itemName, rarity, itemType);
         
         List<Text> lore = item.getTooltip(net.minecraft.item.Item.TooltipContext.DEFAULT, null, net.minecraft.item.tooltip.TooltipType.BASIC);
         
-        HypixelCompare.LOGGER.info("Total lore lines: " + lore.size());
+        SkyblockItemCompare.LOGGER.info("Total lore lines: " + lore.size());
         
         for (int i = 0; i < lore.size(); i++) {
             Text line = lore.get(i);
             String lineText = line.getString();
             
-            HypixelCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
+            SkyblockItemCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
             
             // Parse rarity
             Matcher rarityMatcher = RARITY_PATTERN.matcher(lineText);
             if (rarityMatcher.find()) {
                 rarity = rarityMatcher.group(1);
-                HypixelCompare.LOGGER.info("Found rarity: " + rarity);
+                SkyblockItemCompare.LOGGER.info("Found rarity: " + rarity);
             }
             
             // Parse percentage stats first
@@ -63,7 +63,7 @@ public class SkyblockItemStats {
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
                     stats.percentageStats.add(statName);
-                    HypixelCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
+                    SkyblockItemCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
                 }
             }
             
@@ -74,7 +74,7 @@ public class SkyblockItemStats {
                 int value = Integer.parseInt(valueMatcher.group(2));
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
-                    HypixelCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
+                    SkyblockItemCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
                 }
             }
             
@@ -85,7 +85,7 @@ public class SkyblockItemStats {
                 int value = Integer.parseInt(breakingPowerMatcher.group(1));
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
-                    HypixelCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
+                    SkyblockItemCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
                 }
             }
             
@@ -99,13 +99,13 @@ public class SkyblockItemStats {
                 // Skip if this is actually a stat (contains colon)
                 if (!lineText.contains(":") && !stats.enchantments.containsKey(enchantName)) {
                     stats.enchantments.put(enchantName, level);
-                    HypixelCompare.LOGGER.info("Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
+                    SkyblockItemCompare.LOGGER.info("Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
                 }
             }
         }
         
-        HypixelCompare.LOGGER.info("Final parsed stats: " + stats.stats);
-        HypixelCompare.LOGGER.info("=== END PARSING ===");
+        SkyblockItemCompare.LOGGER.info("Final parsed stats: " + stats.stats);
+        SkyblockItemCompare.LOGGER.info("=== END PARSING ===");
         
         // Update the rarity in the stats object
         stats.rarity = rarity;

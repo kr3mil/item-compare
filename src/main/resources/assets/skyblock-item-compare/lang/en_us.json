@@ -1,0 +1,9 @@
+{
+  "key.skyblock-item-compare.compare": "Select/Compare Item",
+  "key.skyblock-item-compare.reset": "Reset Selection",
+  "category.skyblock-item-compare.general": "Skyblock Item Compare",
+  "text.skyblock-item-compare.first_selected": "First item selected: %s",
+  "text.skyblock-item-compare.no_item_hovered": "No item hovered",
+  "text.skyblock-item-compare.selection_reset": "Selection reset",
+  "text.skyblock-item-compare.comparing": "Item Comparison"
+}

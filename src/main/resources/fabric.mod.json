@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "hypixel-compare",
+  "id": "skyblock-item-compare",
   "version": "${version}",
-  "name": "Hypixel Compare",
-  "description": "Compare Hypixel Skyblock item stats",
+  "name": "Skyblock Item Compare",
+  "description": "A professional item comparison tool for Hypixel Skyblock. Compare stats, enchantments, and item differences side-by-side with visual +/- indicators.",
   "authors": [
     "kr3mil"
   ],
   "contact": {
-    "homepage": "https://github.com/kr3mil/hypixel-compare",
-    "sources": "https://github.com/kr3mil/hypixel-compare"
+    "homepage": "https://github.com/kr3mil/skyblock-item-compare",
+    "sources": "https://github.com/kr3mil/skyblock-item-compare"
   },
   "license": "MIT",
-  "icon": "assets/hypixel-compare/icon.png",
+  "icon": "assets/skyblock-item-compare/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.hypixelcompare.HypixelCompare"
+      "com.skyblockitemcompare.SkyblockItemCompare"
     ],
     "client": [
-      "com.hypixelcompare.HypixelCompareClient"
+      "com.skyblockitemcompare.SkyblockItemCompareClient"
     ]
   },
   "mixins": [
-    "hypixel-compare.mixins.json"
+    "skyblock-item-compare.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.14",
@@ -31,7 +31,5 @@
     "java": ">=21",
     "fabric-api": "*"
   },
-  "suggests": {
-    "another-mod": "*"
-  }
+  "suggests": {}
 }

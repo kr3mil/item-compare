@@ -1,37 +1,46 @@
 
-# Hypixel Compare
+# Skyblock Item Compare
 
-Ever find yourself squinting at two different Skyblock items, trying to figure out which one is *actually* better? Wish you could just see a clear, side-by-side comparison of their stats? Now you can!
+Ever find yourself squinting at two different Skyblock items, trying to figure out which one is *actually* better? Wish you could just see a clear, professional comparison of their stats and enchantments? Now you can!
 
-**Hypixel Compare** is a simple but powerful client-side mod for Fabric that brings the item comparison feature you know and love from games like Diablo right into your Hypixel Skyblock experience.
+**Skyblock Item Compare** brings an intuitive item comparison interface directly into your Hypixel Skyblock experience, with smart auto-detection that works with ANY stat pattern.
 
-## Features
+## ✨ Features
 
--   **Effortless Item Comparison:** No more manual stat-checking! Simply select two items to see a clean, side-by-side breakdown of their stats.
--   **Detailed Stat Analysis:** The mod intelligently parses and displays all the critical stats you care about:
-    -   Damage
-    -   Strength
-    -   Crit Chance & Crit Damage
-    -   Health & Defense
-    -   Speed
-    -   Intelligence (Mana)
--   **Intuitive UI:** A sleek, easy-to-read comparison screen pops up, showing you both items and their stats in a clear, organized way.
--   **Simple Keybind:** Just press 'C' to start comparing. It's that easy!
+- **🎮 Professional Interface:** Clean side-by-side comparison with visual +/- indicators
+- **🤖 Smart Auto-Detection:** Automatically finds and compares ANY stat pattern - Mining Speed, Breaking Power, you name it!
+- **📜 Enchantment Comparison:** Compare enchantment levels with Roman numerals (I, II, III, etc.)
+- **🎯 Visual Indicators:** Green for improvements, red for downgrades - see the differences at a glance
+- **🔮 Future-Proof:** Generic parsing system automatically supports new Hypixel stats as they're added
+- **⚡ Zero Configuration:** Works perfectly out of the box with any Skyblock items
 
-## How to Use
+## 🕹️ How to Use
 
-1.  **Press 'C'** to enter comparison mode.
-2.  **Click** on the first item you want to compare.
-3.  **Click** on the second item.
-4.  Voilà! The comparison screen appears, giving you all the info you need.
-5.  Press **'ESC'** or the "Close" button to exit.
+1. **Hover** over any item in your inventory and press **`M`**
+2. **Hover** over a second item and press **`M`** again  
+3. **Boom!** The comparison screen appears instantly
+4. Press **`R`** anytime to reset, or **`ESC`** to close
 
-## Why You'll Love It
+## 📊 What Gets Compared
 
--   **Save Time:** Make faster, more informed decisions about your gear.
--   **Optimize Your Build:** Easily identify which items give you the best stat boosts for your playstyle.
--   **No More Guesswork:** Stop wondering and start knowing.
+### Stats (Auto-Detected!)
+- **Combat:** Damage, Defense, Strength, Crit Chance, Crit Damage, Health, Ferocity
+- **Mining:** Mining Speed, Mining Fortune, Breaking Power
+- **Utility:** Speed, Mana, Intelligence, Magic Find, Pet Luck
+- **And literally ANY other stat pattern Hypixel adds!**
 
-**Installation is simple:** Just drop the mod into your Fabric mods folder, and you're ready to go!
+### Enchantments
+- All enchantment levels with proper Roman numeral display
+- Missing enchantments clearly marked as "None"
+- Level differences shown with +/- indicators
 
-*Requires Fabric API.*
+## 🚀 Why You'll Love It
+
+- **⏱️ Save Time:** Make instant, informed decisions about your gear upgrades
+- **📈 Optimize Builds:** Easily see which items boost your playstyle the most  
+- **🎯 No More Guesswork:** Clear visual indicators show exactly what you gain or lose
+- **🔧 Always Up-to-Date:** Auto-detection means it works with future Hypixel updates
+
+**Installation is simple:** Just drop the mod into your Fabric mods folder and start comparing!
+
+*Requires Fabric API and Minecraft 1.21.5*
