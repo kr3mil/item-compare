@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.hypixelcompare.mixins",
+  "package": "com.skyblockitemcompare.mixins",
   "compatibilityLevel": "JAVA_21",
   "refmap": "hypixel-compare.refmap.json",
   "mixins": [
