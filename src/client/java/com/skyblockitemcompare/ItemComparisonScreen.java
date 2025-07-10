@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
 import java.util.*;
+import com.skyblockitemcompare.util.ColorUtils;
 
 public class ItemComparisonScreen extends Screen {
     private final ItemStack firstItem;
@@ -102,7 +103,7 @@ public class ItemComparisonScreen extends Screen {
         context.drawTextWithShadow(this.textRenderer, item.getName(), x + 22, y + 22, 0xFFFFFF);
         
         // Rarity with better formatting
-        String rarity = "§7Rarity: §" + getRarityColor(stats.getRarity()) + stats.getRarity();
+        String rarity = "§7Rarity: §" + ColorUtils.getRarityColor(stats.getRarity()) + stats.getRarity();
         context.drawTextWithShadow(this.textRenderer, rarity, x + 22, y + 35, 0xFFFFFF);
     }
     
@@ -148,7 +149,7 @@ public class ItemComparisonScreen extends Screen {
     
     private int renderStatDifference(DrawContext context, int centerX, int y, String statName, int firstValue, int secondValue) {
         int difference = secondValue - firstValue;
-        String statColor = getStatColor(statName);
+        String statColor = ColorUtils.getStatColor(statName);
         String suffix = (firstStats.isPercentageStat(statName) || secondStats.isPercentageStat(statName)) ? "%" : "";
         
         // Add subtle background for alternating rows
@@ -262,55 +263,7 @@ public class ItemComparisonScreen extends Screen {
         return String.valueOf(num); // Fallback for numbers > 10
     }
     
-    private String getRarityColor(String rarity) {
-        switch (rarity.toUpperCase()) {
-            case "COMMON": return "f";
-            case "UNCOMMON": return "a";
-            case "RARE": return "9";
-            case "EPIC": return "5";
-            case "LEGENDARY": return "6";
-            case "MYTHIC": return "d";
-            case "DIVINE": return "b";
-            case "SPECIAL": return "c";
-            default: return "f";
-        }
-    }
     
-    private String getStatColor(String stat) {
-        switch (stat) {
-            case "Damage":
-            case "Strength":
-            case "Crit Chance":
-            case "Crit Damage":
-            case "Ferocity":
-            case "Ability Damage":
-            case "Bonus Attack Speed":
-                return "§c";
-            case "Defense":
-            case "Health":
-            case "Speed":
-            case "True Defense":
-            case "Vitality":
-                return "§a";
-            case "Mana":
-            case "Intelligence":
-                return "§b";
-            case "Mining Speed":
-            case "Mining Fortune":
-            case "Breaking Power":
-            case "Farming Fortune":
-            case "Foraging Fortune":
-                return "§6"; // Gold for mining/farming stats
-            case "Fishing Speed":
-            case "Sea Creature Chance":
-                return "§3"; // Dark aqua for fishing stats
-            case "Magic Find":
-            case "Pet Luck":
-                return "§d"; // Light purple for luck-based stats
-            default:
-                return "§a";
-        }
-    }
     
     @Override
     public boolean shouldCloseOnEsc() {

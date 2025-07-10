@@ -7,6 +7,7 @@ import net.minecraft.util.Formatting;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import com.skyblockitemcompare.util.ColorUtils;
 
 public class SkyblockItemStats {
     public final Map<String, Integer> stats = new HashMap<>();
@@ -143,7 +144,7 @@ public class SkyblockItemStats {
         List<String> formatted = new ArrayList<>();
         
         formatted.add("§6" + itemName);
-        formatted.add("§7Rarity: §" + getRarityColor() + rarity);
+        formatted.add("§7Rarity: §" + ColorUtils.getRarityColor(rarity) + rarity);
         formatted.add("");
         
         String[] statOrder = {"Damage", "Defense", "Strength", "Crit Chance", "Crit Damage", 
@@ -151,7 +152,7 @@ public class SkyblockItemStats {
         
         for (String stat : statOrder) {
             if (stats.containsKey(stat)) {
-                String color = getStatColor(stat);
+                String color = ColorUtils.getStatColor(stat);
                 String suffix = (stat.equals("Crit Chance") || stat.equals("Crit Damage")) ? "%" : "";
                 formatted.add("§7" + stat + ": " + color + "+" + stats.get(stat) + suffix);
             }
@@ -166,37 +167,7 @@ public class SkyblockItemStats {
         return formatted;
     }
     
-    private String getRarityColor() {
-        switch (rarity.toUpperCase()) {
-            case "COMMON": return "f";
-            case "UNCOMMON": return "a";
-            case "RARE": return "9";
-            case "EPIC": return "5";
-            case "LEGENDARY": return "6";
-            case "MYTHIC": return "d";
-            case "DIVINE": return "b";
-            case "SPECIAL": return "c";
-            default: return "f";
-        }
-    }
     
-    private String getStatColor(String stat) {
-        switch (stat) {
-            case "Damage":
-            case "Strength":
-            case "Crit Chance":
-            case "Crit Damage":
-                return "§c";
-            case "Defense":
-            case "Health":
-            case "Speed":
-                return "§a";
-            case "Mana":
-                return "§b";
-            default:
-                return "§a";
-        }
-    }
     
     public int getStat(String statName) {
         return stats.getOrDefault(statName, 0);
