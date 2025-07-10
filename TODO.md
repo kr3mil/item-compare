@@ -19,30 +19,9 @@
 **Solution:** Remove all System.out.println and replace with proper SLF4J logging at DEBUG level
 **Example:** `SkyblockItemCompare.LOGGER.debug("Mouse position - X: {}, Y: {}", mouseX, mouseY);`
 
-### 3. Fix Mixins Configuration
-**File:** `src/main/resources/skyblock-item-compare.mixins.json:4`
-**Issue:** Package name mismatch - `com.hypixelcompare.mixins` vs `com.skyblockitemcompare`
-**Solution:** Change package name to match actual project structure
-**Current:** `"package": "com.hypixelcompare.mixins"`
-**Should be:** `"package": "com.skyblockitemcompare.mixins"`
-
 ## 🟡 Code Quality Issues (Medium Priority)
 
-### 4. Consolidate Duplicate getRarityColor() Methods
-**Files:** 
-- `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java:265-277`
-- `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java:169-181`
-**Issue:** Identical methods duplicated in two classes
-**Solution:** Create `src/client/java/com/skyblockitemcompare/util/ColorUtils.java` and move method there
-
-### 5. Consolidate getStatColor() Methods
-**Files:**
-- `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java:279-313` (comprehensive)
-- `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java:183-199` (basic)
-**Issue:** Different implementations with overlapping functionality
-**Solution:** Merge into single comprehensive version in ColorUtils class
-
-### 6. Implement Missing R Key Reset Functionality
+### 3. Implement Missing R Key Reset Functionality
 **File:** `src/client/java/com/skyblockitemcompare/SkyblockItemCompareClient.java`
 **Issue:** R key reset mentioned in CLAUDE.md but not implemented
 **Solution:** Add R key handler similar to M key handler:
@@ -52,20 +31,20 @@ if (key == GLFW.GLFW_KEY_R) {
 }
 ```
 
-### 7. Reduce Excessive Debug Logging
+### 4. Reduce Excessive Debug Logging
 **File:** `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java`
 **Lines:** 37, 43, 49, 55, 66, 77, 88, 102, 107
 **Issue:** Too many INFO level logs for production
 **Solution:** Convert to DEBUG level and reduce verbosity
 
-### 8. Optimize Reflection Performance
+### 5. Optimize Reflection Performance
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparator.java:61-77`
 **Issue:** Iterates through all methods on every hover event
 **Solution:** Cache the method lookup in a static field after first successful discovery
 
 ## 🔵 Optimizations (Low Priority)
 
-### 9. Extract Magic Numbers to Constants
+### 6. Extract Magic Numbers to Constants
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java`
 **Issue:** Hard-coded UI dimensions and colors throughout
 **Solution:** Create `src/client/java/com/skyblockitemcompare/util/UIConstants.java`
@@ -74,7 +53,7 @@ if (key == GLFW.GLFW_KEY_R) {
 - Colors (0xC0000000, 0xFF555555, etc.)
 - Positioning values (padding, margins)
 
-### 10. Optimize Regex Pattern Compilation
+### 7. Optimize Regex Pattern Compilation
 **File:** `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java:20-24`
 **Issue:** Patterns compiled on class load, could be more efficient
 **Solution:** Move to static final fields and consider compile flags:
@@ -83,21 +62,21 @@ private static final Pattern STAT_WITH_PERCENT_PATTERN = Pattern.compile(
     "([A-Za-z][A-Za-z ]+): \\+?(\\d+)%", Pattern.CASE_INSENSITIVE);
 ```
 
-### 11. Add Null Safety Check
+### 8. Add Null Safety Check
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparator.java:90`
 **Issue:** Potential NPE if player is null during reset
 **Solution:** Add null check before accessing client.player
 
-### 12. Add Resource Cleanup
+### 9. Add Resource Cleanup
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java`
 **Issue:** No explicit resource cleanup
 **Solution:** Override `close()` method and ensure proper cleanup of any resources
 
 ## Implementation Order Recommendation
 
-1. **Start with Critical Issues** (1-3) - These affect security and functionality
-2. **Address Code Quality** (4-8) - These improve maintainability 
-3. **Apply Optimizations** (9-12) - These enhance performance
+1. **Start with Critical Issues** (1-2) - These affect security and functionality
+2. **Address Code Quality** (3-5) - These improve maintainability 
+3. **Apply Optimizations** (6-9) - These enhance performance
 
 ## Testing Commands
 
@@ -114,3 +93,4 @@ After making changes, run:
 - Priority order considers security, functionality, and maintainability
 - Some issues may require creating new utility classes
 - Consider Fabric API documentation for reflection alternatives
+
