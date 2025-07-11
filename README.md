@@ -2,6 +2,8 @@
 
 An item comparison tool that allows you to compare item stats and enchantments side-by-side with visual indicators.
 
+**[📦 Download on Modrinth](https://modrinth.com/mod/skyblock-item-compare)**
+
 ## 🎮 Features
 
 - **Clean comparison interface** - Side-by-side item comparison with intuitive UI
