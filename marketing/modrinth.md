@@ -44,3 +44,11 @@ Ever find yourself squinting at two different Skyblock items, trying to figure o
 **Installation is simple:** Just drop the mod into your Fabric mods folder and start comparing!
 
 *Requires Fabric API and Minecraft 1.21.5*
+
+---
+
+## ☕ Support Development
+
+Love this mod? Consider supporting development with a coffee! ☕
+
+**[Buy Me a Coffee](https://coff.ee/kr3mil)**

@@ -67,6 +67,12 @@ This mod is built with:
 
 Found a bug or have a feature request? Please report it on the [GitHub Issues](https://github.com/kr3mil/skyblock-item-compare/issues) page.
 
+## ☕ Support
+
+If you enjoy this mod and want to support development, consider buying me a coffee:
+
+[![Support](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-orange)](https://coff.ee/kr3mil)
+
 ## License
 
 MIT License
