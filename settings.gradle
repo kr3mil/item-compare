@@ -8,4 +8,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'skyblock-item-compare'
+rootProject.name = 'item-compare'
