@@ -2,7 +2,7 @@
 
 An item comparison tool that allows you to compare item stats and enchantments side-by-side with visual indicators.
 
-**[📦 Download on Modrinth](https://modrinth.com/mod/skyblock-item-compare)**
+**[📦 Download on Modrinth](https://modrinth.com/mod/item-compare)** | **[☕ Buy me a coffee](https://coff.ee/kr3mil)**
 
 ## 🎮 Features
 
