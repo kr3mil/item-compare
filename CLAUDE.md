@@ -9,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Run in development**: `./gradlew runClient`
 - **Generate sources**: `./gradlew genSources`
 
-The built JAR file will be located in `build/libs/hypixel-compare-1.0.0.jar`.
+The built JAR file will be located in `build/libs/skyblock-item-compare-0.0.1.jar`.
 
 ## Project Architecture
 
@@ -17,8 +17,8 @@ This is a Fabric mod for Minecraft 1.21.5 that allows comparing Hypixel Skyblock
 
 ### Core Components
 
-- **HypixelCompare** (main): Main mod initializer, sets up logging and mod ID
-- **HypixelCompareClient** (client): Client-side initialization, registers keybindings:
+- **SkyblockItemCompare** (main): Main mod initializer, sets up logging and mod ID
+- **SkyblockItemCompareClient** (client): Client-side initialization, registers keybindings:
   - M key: Select/compare items
   - R key: Reset selection
   - Handles key events both in inventory screens and globally

@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "com.skyblockitemcompare.mixins",
   "compatibilityLevel": "JAVA_21",
-  "refmap": "hypixel-compare.refmap.json",
+  "refmap": "skyblock-item-compare.refmap.json",
   "mixins": [
   ],
   "client": [

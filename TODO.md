@@ -1,4 +1,4 @@
-# Hypixel Compare Mod - Code Quality & Security Fixes
+# Skyblock Item Compare Mod - Code Quality & Security Fixes
 
 ## 🔴 Critical Issues (High Priority)
 
