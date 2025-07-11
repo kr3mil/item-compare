@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.skyblockitemcompare.mixins",
+  "package": "com.itemcompare.mixins",
   "compatibilityLevel": "JAVA_21",
-  "refmap": "skyblock-item-compare.refmap.json",
+  "refmap": "item-compare.refmap.json",
   "mixins": [
   ],
   "client": [

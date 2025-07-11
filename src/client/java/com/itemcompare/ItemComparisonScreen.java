@@ -1,4 +1,4 @@
-package com.skyblockitemcompare;
+package com.itemcompare;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
@@ -7,28 +7,28 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
 import java.util.*;
-import com.skyblockitemcompare.util.ColorUtils;
+import com.itemcompare.util.ColorUtils;
 
 public class ItemComparisonScreen extends Screen {
     private final ItemStack firstItem;
     private final ItemStack secondItem;
-    private final SkyblockItemStats firstStats;
-    private final SkyblockItemStats secondStats;
+    private final ItemStats firstStats;
+    private final ItemStats secondStats;
     
     public ItemComparisonScreen(ItemStack firstItem, ItemStack secondItem) {
-        super(Text.translatable("text.hypixel-compare.comparing"));
+        super(Text.translatable("text.item-compare.comparing"));
         this.firstItem = firstItem;
         this.secondItem = secondItem;
         
-        SkyblockItemCompare.LOGGER.info("=== CREATING COMPARISON SCREEN ===");
-        SkyblockItemCompare.LOGGER.info("First item: " + firstItem.getName().getString());
-        SkyblockItemCompare.LOGGER.info("Second item: " + secondItem.getName().getString());
+        ItemCompare.LOGGER.info("=== CREATING COMPARISON SCREEN ===");
+        ItemCompare.LOGGER.info("First item: " + firstItem.getName().getString());
+        ItemCompare.LOGGER.info("Second item: " + secondItem.getName().getString());
         
-        this.firstStats = SkyblockItemStats.parseItem(firstItem);
-        this.secondStats = SkyblockItemStats.parseItem(secondItem);
+        this.firstStats = ItemStats.parseItem(firstItem);
+        this.secondStats = ItemStats.parseItem(secondItem);
         
-        SkyblockItemCompare.LOGGER.info("First stats count: " + firstStats.stats.size());
-        SkyblockItemCompare.LOGGER.info("Second stats count: " + secondStats.stats.size());
+        ItemCompare.LOGGER.info("First stats count: " + firstStats.stats.size());
+        ItemCompare.LOGGER.info("Second stats count: " + secondStats.stats.size());
     }
     
     @Override
@@ -91,7 +91,7 @@ public class ItemComparisonScreen extends Screen {
     }
     
     private void renderItemHeader(DrawContext context, int x, int y, ItemStack item, 
-                                  SkyblockItemStats stats, String title) {
+                                  ItemStats stats, String title) {
         // Title with better styling
         context.drawTextWithShadow(this.textRenderer, title, x, y, 0xFFFF55);
         

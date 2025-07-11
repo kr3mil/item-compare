@@ -1,4 +1,4 @@
-package com.skyblockitemcompare;
+package com.itemcompare;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -18,7 +18,7 @@ public class ItemComparator {
         
         if (hoveredItem == null || hoveredItem.isEmpty()) {
             client.player.sendMessage(
-                Text.translatable("text.hypixel-compare.no_item_hovered"), false);
+                Text.translatable("text.item-compare.no_item_hovered"), false);
             return;
         }
         
@@ -26,7 +26,7 @@ public class ItemComparator {
             // Select first item
             firstItem = hoveredItem.copy();
             client.player.sendMessage(
-                Text.translatable("text.hypixel-compare.first_selected", hoveredItem.getName()), false);
+                Text.translatable("text.item-compare.first_selected", hoveredItem.getName()), false);
         } else {
             // Select second item and show comparison
             ItemStack secondItem = hoveredItem.copy();

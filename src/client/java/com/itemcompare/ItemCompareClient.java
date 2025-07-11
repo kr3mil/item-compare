@@ -1,4 +1,4 @@
-package com.skyblockitemcompare;
+package com.itemcompare;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
@@ -6,19 +6,19 @@ import net.fabricmc.fabric.api.client.screen.v1.ScreenKeyboardEvents;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import org.lwjgl.glfw.GLFW;
 
-public class SkyblockItemCompareClient implements ClientModInitializer {
+public class ItemCompareClient implements ClientModInitializer {
     
     
     @Override
     public void onInitializeClient() {
-        SkyblockItemCompare.LOGGER.info("Skyblock Item Compare client initialized!");
+        ItemCompare.LOGGER.info("Item Compare client initialized!");
         
         // Handle key presses in inventory screens using ScreenKeyboardEvents
         ScreenEvents.BEFORE_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
             if (screen instanceof HandledScreen) {
                 ScreenKeyboardEvents.beforeKeyPress(screen).register((scrn, key, scancode, modifiers) -> {
                     if (key == GLFW.GLFW_KEY_M) {
-                        SkyblockItemCompare.LOGGER.info("M key pressed in inventory! Screen: " + 
+                        ItemCompare.LOGGER.info("M key pressed in inventory! Screen: " + 
                             scrn.getClass().getSimpleName());
                         ItemComparator.selectHoveredItem();
                     }

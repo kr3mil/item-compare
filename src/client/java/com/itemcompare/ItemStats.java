@@ -1,4 +1,4 @@
-package com.skyblockitemcompare;
+package com.itemcompare;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -7,9 +7,9 @@ import net.minecraft.util.Formatting;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.skyblockitemcompare.util.ColorUtils;
+import com.itemcompare.util.ColorUtils;
 
-public class SkyblockItemStats {
+public class ItemStats {
     public final Map<String, Integer> stats = new HashMap<>();
     public final Set<String> percentageStats = new HashSet<>();
     public final Map<String, Integer> enchantments = new HashMap<>();
@@ -24,36 +24,36 @@ public class SkyblockItemStats {
     private static final Pattern RARITY_PATTERN = Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
     private static final Pattern ENCHANTMENT_PATTERN = Pattern.compile("([A-Za-z][A-Za-z ]+) ([IVX]+)"); // Enchantment Name I, II, III, IV, V, etc.
     
-    public SkyblockItemStats(String itemName, String rarity, String itemType) {
+    public ItemStats(String itemName, String rarity, String itemType) {
         this.itemName = itemName;
         this.rarity = rarity;
         this.itemType = itemType;
     }
     
-    public static SkyblockItemStats parseItem(ItemStack item) {
+    public static ItemStats parseItem(ItemStack item) {
         String itemName = item.getName().getString();
         String rarity = "COMMON";
         String itemType = "UNKNOWN";
         
-        SkyblockItemCompare.LOGGER.info("=== PARSING ITEM: " + itemName + " ===");
+        ItemCompare.LOGGER.info("=== PARSING ITEM: " + itemName + " ===");
         
-        SkyblockItemStats stats = new SkyblockItemStats(itemName, rarity, itemType);
+        ItemStats stats = new ItemStats(itemName, rarity, itemType);
         
         List<Text> lore = item.getTooltip(net.minecraft.item.Item.TooltipContext.DEFAULT, null, net.minecraft.item.tooltip.TooltipType.BASIC);
         
-        SkyblockItemCompare.LOGGER.info("Total lore lines: " + lore.size());
+        ItemCompare.LOGGER.info("Total lore lines: " + lore.size());
         
         for (int i = 0; i < lore.size(); i++) {
             Text line = lore.get(i);
             String lineText = line.getString();
             
-            SkyblockItemCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
+            ItemCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
             
             // Parse rarity
             Matcher rarityMatcher = RARITY_PATTERN.matcher(lineText);
             if (rarityMatcher.find()) {
                 rarity = rarityMatcher.group(1);
-                SkyblockItemCompare.LOGGER.info("Found rarity: " + rarity);
+                ItemCompare.LOGGER.info("Found rarity: " + rarity);
             }
             
             // Parse percentage stats first
@@ -64,7 +64,7 @@ public class SkyblockItemStats {
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
                     stats.percentageStats.add(statName);
-                    SkyblockItemCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
+                    ItemCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
                 }
             }
             
@@ -75,7 +75,7 @@ public class SkyblockItemStats {
                 int value = Integer.parseInt(valueMatcher.group(2));
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
-                    SkyblockItemCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
+                    ItemCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
                 }
             }
             
@@ -86,7 +86,7 @@ public class SkyblockItemStats {
                 int value = Integer.parseInt(breakingPowerMatcher.group(1));
                 if (!stats.stats.containsKey(statName)) {
                     stats.stats.put(statName, value);
-                    SkyblockItemCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
+                    ItemCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
                 }
             }
             
@@ -100,13 +100,13 @@ public class SkyblockItemStats {
                 // Skip if this is actually a stat (contains colon)
                 if (!lineText.contains(":") && !stats.enchantments.containsKey(enchantName)) {
                     stats.enchantments.put(enchantName, level);
-                    SkyblockItemCompare.LOGGER.info("Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
+                    ItemCompare.LOGGER.info("Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
                 }
             }
         }
         
-        SkyblockItemCompare.LOGGER.info("Final parsed stats: " + stats.stats);
-        SkyblockItemCompare.LOGGER.info("=== END PARSING ===");
+        ItemCompare.LOGGER.info("Final parsed stats: " + stats.stats);
+        ItemCompare.LOGGER.info("=== END PARSING ===");
         
         // Update the rarity in the stats object
         stats.rarity = rarity;

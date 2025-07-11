@@ -1,9 +1,9 @@
 
-# Skyblock Item Compare
+# Item Compare
 
 Ever find yourself squinting at two different Skyblock items, trying to figure out which one is *actually* better? Wish you could just see a clear, professional comparison of their stats and enchantments? Now you can!
 
-**Skyblock Item Compare** brings an intuitive item comparison interface directly into your Hypixel Skyblock experience, with smart auto-detection that works with ANY stat pattern.
+**Item Compare** brings an intuitive item comparison interface directly into your Hypixel Skyblock experience, with smart auto-detection that works with ANY stat pattern.
 
 ## ✨ Features
 

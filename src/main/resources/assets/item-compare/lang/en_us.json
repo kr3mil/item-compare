@@ -1,0 +1,7 @@
+{
+  "key.item-compare.compare": "Select/Compare Item",
+  "category.item-compare.general": "Item Compare",
+  "text.item-compare.first_selected": "First item selected: %s",
+  "text.item-compare.no_item_hovered": "No item hovered",
+  "text.item-compare.comparing": "Item Comparison"
+}

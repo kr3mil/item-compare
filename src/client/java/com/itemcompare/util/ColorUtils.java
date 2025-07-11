@@ -1,4 +1,4 @@
-package com.skyblockitemcompare.util;
+package com.itemcompare.util;
 
 public class ColorUtils {
     

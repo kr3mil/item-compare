@@ -1,4 +1,4 @@
-# Skyblock Item Compare
+# Item Compare
 
 A professional item comparison tool for Hypixel Skyblock that allows you to compare item stats and enchantments side-by-side with visual indicators.
 
@@ -15,7 +15,7 @@ A professional item comparison tool for Hypixel Skyblock that allows you to comp
 
 1. Install [Fabric Loader](https://fabricmc.net/use/) 0.16.14+ for Minecraft 1.21.5
 2. Install [Fabric API](https://modrinth.com/mod/fabric-api)
-3. Download the mod JAR from [releases](https://github.com/kr3mil/skyblock-item-compare/releases)
+3. Download the mod JAR from [releases](https://github.com/kr3mil/item-compare/releases)
 4. Place the JAR file in your `mods` folder
 
 ## 🕹️ How to Use
@@ -64,7 +64,7 @@ This mod is built with:
 
 ## 🐛 Issues & Support
 
-Found a bug or have a feature request? Please report it on the [GitHub Issues](https://github.com/kr3mil/skyblock-item-compare/issues) page.
+Found a bug or have a feature request? Please report it on the [GitHub Issues](https://github.com/kr3mil/item-compare/issues) page.
 
 ## ☕ Support
 
