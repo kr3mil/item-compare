@@ -1,15 +1,16 @@
 # Item Compare
 
-A professional item comparison tool for Hypixel Skyblock that allows you to compare item stats and enchantments side-by-side with visual indicators.
+An item comparison tool that allows you to compare item stats and enchantments side-by-side with visual indicators.
 
 ## 🎮 Features
 
-- **Professional comparison interface** - Clean side-by-side item comparison with intuitive UI
+- **Clean comparison interface** - Side-by-side item comparison with intuitive UI
 - **Automatic stat detection** - Dynamically parses ANY stat pattern (Mining Speed, Mining Fortune, Breaking Power, etc.)
 - **Enchantment comparison** - Shows enchantment differences with Roman numerals (I, II, III, etc.)
 - **Visual indicators** - Green/red +/- indicators for stat improvements and downgrades
-- **Generic parsing system** - Future-proof design that automatically supports new Hypixel stats
-- **No configuration needed** - Works out of the box with any Hypixel Skyblock items
+- **Generic parsing system** - Future-proof design that automatically supports new stats
+- **Hypixel Skyblock optimized** - Full support for all Hypixel Skyblock stat patterns and items
+- **No configuration needed** - Works out of the box with any items
 
 ## 🛠️ Installation
 
