@@ -5,7 +5,7 @@ Ever find yourself squinting at two different items, trying to figure out which 
 
 **Item Compare** brings an intuitive item comparison interface directly into your Minecraft experience, with smart auto-detection that works with ANY stat pattern.
 
-**[💻 View on GitHub](https://github.com/kr3mil/skyblock-item-compare)**
+**[💻 View on GitHub](https://github.com/kr3mil/item-compare)**
 
 ## ✨ Features
 
