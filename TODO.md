@@ -21,30 +21,21 @@
 
 ## 🟡 Code Quality Issues (Medium Priority)
 
-### 3. Implement Missing R Key Reset Functionality
-**File:** `src/client/java/com/skyblockitemcompare/SkyblockItemCompareClient.java`
-**Issue:** R key reset mentioned in CLAUDE.md but not implemented
-**Solution:** Add R key handler similar to M key handler:
-```java
-if (key == GLFW.GLFW_KEY_R) {
-    ItemComparator.resetSelection();
-}
-```
 
-### 4. Reduce Excessive Debug Logging
+### 3. Reduce Excessive Debug Logging
 **File:** `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java`
 **Lines:** 37, 43, 49, 55, 66, 77, 88, 102, 107
 **Issue:** Too many INFO level logs for production
 **Solution:** Convert to DEBUG level and reduce verbosity
 
-### 5. Optimize Reflection Performance
+### 4. Optimize Reflection Performance
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparator.java:61-77`
 **Issue:** Iterates through all methods on every hover event
 **Solution:** Cache the method lookup in a static field after first successful discovery
 
 ## 🔵 Optimizations (Low Priority)
 
-### 6. Extract Magic Numbers to Constants
+### 5. Extract Magic Numbers to Constants
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java`
 **Issue:** Hard-coded UI dimensions and colors throughout
 **Solution:** Create `src/client/java/com/skyblockitemcompare/util/UIConstants.java`
@@ -53,7 +44,7 @@ if (key == GLFW.GLFW_KEY_R) {
 - Colors (0xC0000000, 0xFF555555, etc.)
 - Positioning values (padding, margins)
 
-### 7. Optimize Regex Pattern Compilation
+### 6. Optimize Regex Pattern Compilation
 **File:** `src/client/java/com/skyblockitemcompare/SkyblockItemStats.java:20-24`
 **Issue:** Patterns compiled on class load, could be more efficient
 **Solution:** Move to static final fields and consider compile flags:
@@ -62,12 +53,12 @@ private static final Pattern STAT_WITH_PERCENT_PATTERN = Pattern.compile(
     "([A-Za-z][A-Za-z ]+): \\+?(\\d+)%", Pattern.CASE_INSENSITIVE);
 ```
 
-### 8. Add Null Safety Check
-**File:** `src/client/java/com/skyblockitemcompare/ItemComparator.java:90`
-**Issue:** Potential NPE if player is null during reset
+### 7. Add Null Safety Check
+**File:** `src/client/java/com/skyblockitemcompare/ItemComparator.java`
+**Issue:** Potential NPE if player is null during item selection
 **Solution:** Add null check before accessing client.player
 
-### 9. Add Resource Cleanup
+### 8. Add Resource Cleanup
 **File:** `src/client/java/com/skyblockitemcompare/ItemComparisonScreen.java`
 **Issue:** No explicit resource cleanup
 **Solution:** Override `close()` method and ensure proper cleanup of any resources
@@ -75,8 +66,8 @@ private static final Pattern STAT_WITH_PERCENT_PATTERN = Pattern.compile(
 ## Implementation Order Recommendation
 
 1. **Start with Critical Issues** (1-2) - These affect security and functionality
-2. **Address Code Quality** (3-5) - These improve maintainability 
-3. **Apply Optimizations** (6-9) - These enhance performance
+2. **Address Code Quality** (3-4) - These improve maintainability 
+3. **Apply Optimizations** (5-8) - These enhance performance
 
 ## Testing Commands
 

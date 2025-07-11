@@ -80,9 +80,4 @@ public class ItemComparator {
             new ItemComparisonScreen(first, second));
     }
     
-    public static void resetSelection() {
-        firstItem = null;
-        MinecraftClient.getInstance().player.sendMessage(
-            Text.translatable("text.hypixel-compare.selection_reset"), false);
-    }
 }

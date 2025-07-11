@@ -20,7 +20,6 @@ This is a Fabric mod for Minecraft 1.21.5 that allows comparing Hypixel Skyblock
 - **SkyblockItemCompare** (main): Main mod initializer, sets up logging and mod ID
 - **SkyblockItemCompareClient** (client): Client-side initialization, registers keybindings:
   - M key: Select/compare items
-  - R key: Reset selection
   - Handles key events both in inventory screens and globally
 - **ItemComparator**: Core comparison logic that manages the two-item selection workflow:
   - First item selection stores the item
@@ -52,4 +51,3 @@ This is a Fabric mod for Minecraft 1.21.5 that allows comparing Hypixel Skyblock
 - The mod uses split environment source sets (main and client)
 - Debug logging is enabled throughout for development
 - Item selection workflow: hover over item → press M → hover over second item → press M → comparison screen opens
-- Reset selection with R key at any time

@@ -23,8 +23,7 @@ A professional item comparison tool for Hypixel Skyblock that allows you to comp
 1. **Select first item**: Hover over any item in your inventory and press `M`
 2. **Select second item**: Hover over another item and press `M` again
 3. **View comparison**: The comparison screen opens automatically
-4. **Reset selection**: Press `R` at any time to reset your selection
-5. **Close comparison**: Press `ESC` or click "Close" to exit
+4. **Close comparison**: Press `ESC` or click "Close" to exit
 
 ## 📊 What Gets Compared
 

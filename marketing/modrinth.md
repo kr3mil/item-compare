@@ -19,7 +19,7 @@ Ever find yourself squinting at two different Skyblock items, trying to figure o
 1. **Hover** over any item in your inventory and press **`M`**
 2. **Hover** over a second item and press **`M`** again  
 3. **Boom!** The comparison screen appears instantly
-4. Press **`R`** anytime to reset, or **`ESC`** to close
+4. Press **`ESC`** to close
 
 ## 📊 What Gets Compared
 
