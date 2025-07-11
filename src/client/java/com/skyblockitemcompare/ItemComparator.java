@@ -41,7 +41,6 @@ public class ItemComparator {
             double mouseX = client.mouse.getX() * (double) client.getWindow().getScaledWidth() / (double) client.getWindow().getWidth();
             double mouseY = client.mouse.getY() * (double) client.getWindow().getScaledHeight() / (double) client.getWindow().getHeight();
             
-            System.out.println("DEBUG: Mouse position - X: " + mouseX + ", Y: " + mouseY);
             
             // Use reflection to access the private getSlotAt method
             try {
@@ -49,14 +48,11 @@ public class ItemComparator {
                 getSlotAtMethod.setAccessible(true);
                 Slot hoveredSlot = (Slot) getSlotAtMethod.invoke(handledScreen, mouseX, mouseY);
                 
-                System.out.println("DEBUG: Hovered slot: " + hoveredSlot);
                 
                 if (hoveredSlot != null && hoveredSlot.hasStack()) {
-                    System.out.println("DEBUG: Found item: " + hoveredSlot.getStack().getName().getString());
                     return hoveredSlot.getStack();
                 }
             } catch (Exception e) {
-                System.out.println("DEBUG: Reflection failed: " + e.getMessage());
                 // Try all methods to find the right one
                 for (java.lang.reflect.Method method : HandledScreen.class.getDeclaredMethods()) {
                     if (method.getParameterCount() == 2 && 
@@ -67,7 +63,6 @@ public class ItemComparator {
                             method.setAccessible(true);
                             Slot slot = (Slot) method.invoke(handledScreen, mouseX, mouseY);
                             if (slot != null && slot.hasStack()) {
-                                System.out.println("DEBUG: Found slot with method: " + method.getName());
                                 return slot.getStack();
                             }
                         } catch (Exception ex) {
