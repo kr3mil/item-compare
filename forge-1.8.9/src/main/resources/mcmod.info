@@ -1,0 +1,16 @@
+[
+{
+  "modid": "item-compare",
+  "name": "Item Compare",
+  "description": "Compare Hypixel Skyblock item stats side-by-side",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["kr3mil"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

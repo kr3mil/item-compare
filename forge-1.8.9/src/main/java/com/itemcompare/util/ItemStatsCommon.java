@@ -1,13 +1,10 @@
-package com.itemcompare;
+package com.itemcompare.util;
 
-import com.itemcompare.util.ColorUtils;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
 
-public class ItemStats {
+public class ItemStatsCommon {
   public final Map<String, Integer> stats = new HashMap<>();
   public final Set<String> percentageStats = new HashSet<>();
   public final Map<String, Integer> enchantments = new HashMap<>();
@@ -26,40 +23,29 @@ public class ItemStats {
   private static final Pattern ENCHANTMENT_PATTERN =
       Pattern.compile("([A-Za-z][A-Za-z ]+) ([IVX]+)"); // Enchantment Name I, II, III, IV, V, etc.
 
-  public ItemStats(String itemName, String rarity, String itemType) {
+  public ItemStatsCommon(String itemName, String rarity, String itemType) {
     this.itemName = itemName;
     this.rarity = rarity;
     this.itemType = itemType;
   }
 
-  public static ItemStats parseItem(ItemStack item) {
-    String itemName = item.getName().getString();
+  /**
+   * Parse item stats from tooltip lines
+   * @param itemName The display name of the item
+   * @param tooltipLines List of tooltip text lines (without formatting codes)
+   * @return Parsed ItemStatsCommon object
+   */
+  public static ItemStatsCommon parseFromTooltip(String itemName, List<String> tooltipLines) {
     String rarity = "COMMON";
     String itemType = "UNKNOWN";
 
-    ItemCompare.LOGGER.info("=== PARSING ITEM: " + itemName + " ===");
+    ItemStatsCommon stats = new ItemStatsCommon(itemName, rarity, itemType);
 
-    ItemStats stats = new ItemStats(itemName, rarity, itemType);
-
-    List<Text> lore =
-        item.getTooltip(
-            net.minecraft.item.Item.TooltipContext.DEFAULT,
-            null,
-            net.minecraft.item.tooltip.TooltipType.BASIC);
-
-    ItemCompare.LOGGER.info("Total lore lines: " + lore.size());
-
-    for (int i = 0; i < lore.size(); i++) {
-      Text line = lore.get(i);
-      String lineText = line.getString();
-
-      ItemCompare.LOGGER.info("Line " + i + ": '" + lineText + "'");
-
+    for (String lineText : tooltipLines) {
       // Parse rarity
       Matcher rarityMatcher = RARITY_PATTERN.matcher(lineText);
       if (rarityMatcher.find()) {
         rarity = rarityMatcher.group(1);
-        ItemCompare.LOGGER.info("Found rarity: " + rarity);
       }
 
       // Parse percentage stats first
@@ -70,7 +56,6 @@ public class ItemStats {
         if (!stats.stats.containsKey(statName)) {
           stats.stats.put(statName, value);
           stats.percentageStats.add(statName);
-          ItemCompare.LOGGER.info("Percentage stat found: " + statName + " = " + value + "%");
         }
       }
 
@@ -81,7 +66,6 @@ public class ItemStats {
         int value = Integer.parseInt(valueMatcher.group(2));
         if (!stats.stats.containsKey(statName)) {
           stats.stats.put(statName, value);
-          ItemCompare.LOGGER.info("Value stat found: " + statName + " = " + value);
         }
       }
 
@@ -92,7 +76,6 @@ public class ItemStats {
         int value = Integer.parseInt(breakingPowerMatcher.group(1));
         if (!stats.stats.containsKey(statName)) {
           stats.stats.put(statName, value);
-          ItemCompare.LOGGER.info("Breaking Power found: " + statName + " = " + value);
         }
       }
 
@@ -106,14 +89,9 @@ public class ItemStats {
         // Skip if this is actually a stat (contains colon)
         if (!lineText.contains(":") && !stats.enchantments.containsKey(enchantName)) {
           stats.enchantments.put(enchantName, level);
-          ItemCompare.LOGGER.info(
-              "Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
         }
       }
     }
-
-    ItemCompare.LOGGER.info("Final parsed stats: " + stats.stats);
-    ItemCompare.LOGGER.info("=== END PARSING ===");
 
     // Update the rarity in the stats object
     stats.rarity = rarity;

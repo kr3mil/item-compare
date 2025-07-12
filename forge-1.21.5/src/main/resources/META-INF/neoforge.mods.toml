@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[21,)"
+license="MIT"
+
+[[mods]]
+modId="item-compare"
+version="0.0.2"
+displayName="Item Compare"
+description="Compare Hypixel Skyblock item stats side-by-side"
+authors="kr3mil"
+
+[[dependencies.item-compare]]
+modId="neoforge"
+type="required"
+versionRange="[21.4.167-beta,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.item-compare]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.4,1.22)"
+ordering="NONE"
+side="BOTH"

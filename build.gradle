@@ -1,91 +1,55 @@
 plugins {
-    id 'fabric-loom' version '1.10.1'
-    id 'maven-publish'
-    id 'com.diffplug.spotless' version '6.25.0'
-    id 'checkstyle'
+    id 'base'
 }
 
-version = project.mod_version
-group = project.maven_group
-
-base {
-    archivesName = project.archives_base_name
+allprojects {
+    group = 'com.itemcompare'
+    version = '0.0.2'
 }
 
-repositories {
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
-    }
-}
-
-loom {
-    splitEnvironmentSourceSets()
+subprojects {
+    apply plugin: 'java'
     
-    mods {
-        "item-compare" {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
+    repositories {
+        mavenCentral()
+        maven {
+            name = 'Minecraft'
+            url = 'https://libraries.minecraft.net/'
         }
     }
-}
-
-dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-}
-
-processResources {
-    inputs.property "version", project.version
-
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
-
-java {
-    withSourcesJar()
-    
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-
-jar {
-    from("LICENSE") {
-        rename { "${it}_${project.base.archivesName.get()}"}
-    }
-}
-
-// Spotless configuration for code formatting
-spotless {
     java {
-        target 'src/**/*.java'
-        googleJavaFormat('1.19.1')
-        removeUnusedImports()
-        trimTrailingWhitespace()
-        endWithNewline()
+        withSourcesJar()
     }
 }
 
-// Checkstyle configuration for linting
-checkstyle {
-    toolVersion = '10.12.7'
-    configFile = file("${rootDir}/checkstyle.xml")
+// Unified build task to build all versions
+task buildAll {
+    group = 'build'
+    description = 'Builds all working platform versions'
+    dependsOn ':fabric-1.21.5:build'
+    // Note: forge-1.21.5 currently has version dependency issues
+    // Note: forge-1.8.9 must be built separately due to legacy Gradle requirements
 }
 
-configurations.checkstyle {
-    resolutionStrategy.capabilitiesResolution.withCapability("com.google.collections:google-collections") {
-        select("com.google.guava:guava:0")
-    }
+// Task to clean all subprojects
+task cleanAll {
+    group = 'build'
+    description = 'Cleans all platform versions'
+    dependsOn ':fabric-1.21.5:clean'
 }
 
-checkstyleMain {
-    source = sourceSets.main.allJava
+// Development tasks
+task runFabric {
+    group = 'development'
+    description = 'Run Fabric client'
+    dependsOn ':fabric-1.21.5:runClient'
 }
 
-checkstyleClient {
-    source = sourceSets.client.allJava
+task runForgeModern {
+    group = 'development'
+    description = 'Run modern Forge client'
+    dependsOn ':forge-1.21.5:runClient'
 }
+
+// Note: forge-1.8.9 run tasks must be executed separately in the forge-1.8.9 directory

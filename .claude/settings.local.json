@@ -19,7 +19,11 @@
       "Bash(rg:*)",
       "Bash(convert:*)",
       "Bash(ls:*)",
-      "WebFetch(domain:wiki.fabricmc.net)"
+      "WebFetch(domain:wiki.fabricmc.net)",
+      "Bash(chmod:*)",
+      "Bash(docker-compose run:*)",
+      "Bash(docker:*)",
+      "Bash(./build-all.sh)"
     ],
     "deny": []
   }

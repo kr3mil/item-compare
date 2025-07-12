@@ -4,8 +4,20 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+        maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
         gradlePluginPortal()
     }
 }
 
 rootProject.name = 'item-compare'
+
+include 'fabric-1.21.5'
+include 'forge-1.21.5'
+// Note: forge-1.8.9 requires legacy Gradle and must be built separately

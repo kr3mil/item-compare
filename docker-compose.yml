@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Modern platforms (Fabric 1.21.5, NeoForge when fixed)
+  modern-build:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.modern
+    volumes:
+      - .:/workspace
+      - gradle-cache-modern:/root/.gradle
+    environment:
+      - GRADLE_OPTS=-Xmx2g
+    command: ["./gradlew", "buildAll", "--no-daemon"]
+
+  # Legacy Forge 1.8.9
+  legacy-build:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.legacy
+    volumes:
+      - ./forge-1.8.9:/workspace
+      - gradle-cache-legacy:/root/.gradle
+    working_dir: /workspace
+    environment:
+      - GRADLE_OPTS=-Xmx1g
+    command: ["./gradlew", "build", "--no-daemon"]
+
+  # Development environment for Fabric
+  fabric-dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.modern
+    volumes:
+      - .:/workspace
+      - gradle-cache-modern:/root/.gradle
+      - minecraft-run:/workspace/fabric-1.21.5/run
+    ports:
+      - "25565:25565"  # Minecraft server port
+    environment:
+      - GRADLE_OPTS=-Xmx3g
+    command: ["./gradlew", "runFabric", "--no-daemon"]
+    stdin_open: true
+    tty: true
+
+volumes:
+  gradle-cache-modern:
+  gradle-cache-legacy:
+  minecraft-run:
