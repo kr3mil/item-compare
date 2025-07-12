@@ -22,10 +22,11 @@ repositories {
 neoForge {
     version = project.neoforge_version
     
-    parchment {
-        minecraftVersion = project.minecraft_version
-        mappingsVersion = project.parchment_mappings
-    }
+    // Disable Parchment temporarily since 1.21.5 mappings not available
+    // parchment {
+    //     minecraftVersion = project.minecraft_version
+    //     mappingsVersion = project.parchment_mappings
+    // }
     
     runs {
         client {
