@@ -11,6 +11,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The built JAR file will be located in `build/libs/item-compare-0.0.1.jar`.
 
+## Code Quality Commands
+
+- **Format code**: `./gradlew spotlessApply`
+- **Check formatting**: `./gradlew spotlessCheck`
+- **Run linting**: `./gradlew checkstyleMain checkstyleClient`
+- **Check all (format + lint)**: `./gradlew spotlessCheck checkstyleMain checkstyleClient`
+
 ## Project Architecture
 
 This is a Fabric mod for Minecraft 1.21.5 that allows comparing Hypixel Skyblock item stats side-by-side.
