@@ -18,7 +18,8 @@
       "Bash(rm:*)",
       "Bash(rg:*)",
       "Bash(convert:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:wiki.fabricmc.net)"
     ],
     "deny": []
   }
