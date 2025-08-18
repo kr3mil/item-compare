@@ -32,6 +32,7 @@ public class ItemComparisonScreen extends Screen {
 
   @Override
   protected void init() {
+    super.init(); // Initialize parent screen fields including textRenderer
     this.addDrawableChild(
         ButtonWidget.builder(
                 Text.literal("Close"),
@@ -75,7 +76,7 @@ public class ItemComparisonScreen extends Screen {
             + " §7vs §f"
             + secondItem.getName().getString();
     context.drawCenteredTextWithShadow(
-        this.textRenderer, titleText, centerX, panelY + 12, 0xFFFFFF);
+        this.textRenderer, titleText, centerX, panelY + 12, 0xFFFFFFFF);
 
     // Separator line under title
     int separatorY = panelY + titleHeight + 5;
@@ -104,25 +105,25 @@ public class ItemComparisonScreen extends Screen {
   private void renderItemHeader(
       DrawContext context, int x, int y, ItemStack item, ItemStats stats, String title) {
     // Title with better styling
-    context.drawTextWithShadow(this.textRenderer, title, x, y, 0xFFFF55);
+    context.drawTextWithShadow(this.textRenderer, title, x, y, 0xFFFFFF55);
 
     // Item icon with background
     context.fill(x - 2, y + 17, x + 18, y + 37, 0xFF333333);
     context.drawItem(item, x, y + 19);
 
     // Item name with proper spacing
-    context.drawTextWithShadow(this.textRenderer, item.getName(), x + 22, y + 22, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, item.getName(), x + 22, y + 22, 0xFFFFFFFF);
 
     // Rarity with better formatting
     String rarity =
         "§7Rarity: §" + ColorUtils.getRarityColor(stats.getRarity()) + stats.getRarity();
-    context.drawTextWithShadow(this.textRenderer, rarity, x + 22, y + 35, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, rarity, x + 22, y + 35, 0xFFFFFFFF);
   }
 
   private int renderStatComparison(DrawContext context, int centerX, int startY) {
     // Section header with separator
     context.drawCenteredTextWithShadow(
-        this.textRenderer, "§e§lSTAT COMPARISON", centerX, startY, 0xFFFF55);
+        this.textRenderer, "§e§lSTAT COMPARISON", centerX, startY, 0xFFFFFF55);
     context.fill(centerX - 100, startY + 12, centerX + 100, startY + 13, 0xFF666666);
 
     int currentY = startY + 25;
@@ -186,14 +187,14 @@ public class ItemComparisonScreen extends Screen {
 
     // Base stat line with proper alignment
     String baseStat = "§7" + statName + ": " + statColor + firstValue + suffix;
-    context.drawTextWithShadow(this.textRenderer, baseStat, centerX - 160, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, baseStat, centerX - 160, y, 0xFFFFFFFF);
 
     // Comparison arrow with better styling
-    context.drawTextWithShadow(this.textRenderer, "§8→", centerX - 20, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, "§8→", centerX - 20, y, 0xFFFFFFFF);
 
     // New value
     String newValue = statColor + secondValue + suffix;
-    context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFFFF);
 
     // Difference indicator with better positioning
     if (difference != 0) {
@@ -202,10 +203,10 @@ public class ItemComparisonScreen extends Screen {
 
       if (difference > 0) {
         diffText = "(+" + difference + suffix + ")";
-        diffColor = 0x55FF55; // Green for positive
+        diffColor = 0xFF55FF55; // Green for positive
       } else {
         diffText = "(" + difference + suffix + ")";
-        diffColor = 0xFF5555; // Red for negative
+        diffColor = 0xFFFF5555; // Red for negative
       }
 
       context.drawTextWithShadow(this.textRenderer, diffText, centerX + 85, y, diffColor);
@@ -217,7 +218,7 @@ public class ItemComparisonScreen extends Screen {
   private void renderEnchantmentComparison(DrawContext context, int centerX, int startY) {
     // Section header with separator
     context.drawCenteredTextWithShadow(
-        this.textRenderer, "§d§lENCHANTMENTS", centerX, startY, 0xFFAA00);
+        this.textRenderer, "§d§lENCHANTMENTS", centerX, startY, 0xFFFFAA00);
     context.fill(centerX - 100, startY + 12, centerX + 100, startY + 13, 0xFF666666);
 
     int currentY = startY + 25;
@@ -229,7 +230,7 @@ public class ItemComparisonScreen extends Screen {
 
     if (allEnchantments.isEmpty()) {
       context.drawCenteredTextWithShadow(
-          this.textRenderer, "§7No enchantments found", centerX, currentY, 0xFFFFFF);
+          this.textRenderer, "§7No enchantments found", centerX, currentY, 0xFFFFFFFF);
       return;
     }
 
@@ -264,14 +265,14 @@ public class ItemComparisonScreen extends Screen {
     // Base enchantment line with proper alignment
     String baseEnchant =
         "§7" + enchantment + ": §d" + (firstLevel > 0 ? intToRoman(firstLevel) : "§8None");
-    context.drawTextWithShadow(this.textRenderer, baseEnchant, centerX - 160, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, baseEnchant, centerX - 160, y, 0xFFFFFFFF);
 
     // Comparison arrow
-    context.drawTextWithShadow(this.textRenderer, "§8→", centerX - 20, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, "§8→", centerX - 20, y, 0xFFFFFFFF);
 
     // New value
     String newValue = "§d" + (secondLevel > 0 ? intToRoman(secondLevel) : "§8None");
-    context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFF);
+    context.drawTextWithShadow(this.textRenderer, newValue, centerX + 5, y, 0xFFFFFFFF);
 
     // Difference indicator with better positioning
     if (difference != 0) {
@@ -280,10 +281,10 @@ public class ItemComparisonScreen extends Screen {
 
       if (difference > 0) {
         diffText = "(+" + difference + ")";
-        diffColor = 0x55FF55; // Green for positive
+        diffColor = 0xFF55FF55; // Green for positive
       } else {
         diffText = "(" + difference + ")";
-        diffColor = 0xFF5555; // Red for negative
+        diffColor = 0xFFFF5555; // Red for negative
       }
 
       context.drawTextWithShadow(this.textRenderer, diffText, centerX + 85, y, diffColor);
