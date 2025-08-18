@@ -24,7 +24,10 @@ public class ItemStats {
   private static final Pattern RARITY_PATTERN =
       Pattern.compile("([A-Z]+) [A-Z]+$"); // UNCOMMON PICKAXE, RARE SWORD, etc.
   private static final Pattern ENCHANTMENT_PATTERN =
-      Pattern.compile("([A-Za-z][A-Za-z ]+) ([IVX]+)"); // Enchantment Name I, II, III, IV, V, etc.
+      Pattern.compile(
+          "([A-Za-z][A-Za-z ]*) ([IVX]+)"); // Enchantment Name I, II, III, IV, V, etc. (allows
+
+  // single words)
 
   public ItemStats(String itemName, String rarity, String itemType) {
     this.itemName = itemName;
@@ -96,23 +99,40 @@ public class ItemStats {
         }
       }
 
-      // Parse enchantments
+      // Parse enchantments - look for blue-colored text lines with Roman numerals
+      // Use matcher.find() in a loop to get ALL matches on the line, not just the first one
       Matcher enchantmentMatcher = ENCHANTMENT_PATTERN.matcher(lineText);
-      if (enchantmentMatcher.find()) {
+      boolean foundAnyEnchantment = false;
+
+      while (enchantmentMatcher.find()) {
+        if (!foundAnyEnchantment) {
+          ItemCompare.LOGGER.info("Potential enchantment line: '" + lineText + "'");
+          foundAnyEnchantment = true;
+        }
+
         String enchantName = enchantmentMatcher.group(1).trim();
         String romanLevel = enchantmentMatcher.group(2);
         int level = romanToInt(romanLevel);
 
-        // Skip if this is actually a stat (contains colon)
-        if (!lineText.contains(":") && !stats.enchantments.containsKey(enchantName)) {
+        ItemCompare.LOGGER.info("Enchantment match: " + enchantName + " " + romanLevel);
+
+        // Skip if this is actually a stat (contains colon) or gear score line
+        if (!lineText.contains(":")
+            && !lineText.contains("Gear Score")
+            && !stats.enchantments.containsKey(enchantName)) {
           stats.enchantments.put(enchantName, level);
           ItemCompare.LOGGER.info(
               "Enchantment found: " + enchantName + " = " + level + " (" + romanLevel + ")");
+        } else if (lineText.contains(":")) {
+          ItemCompare.LOGGER.info("Skipped enchantment (contains colon): " + enchantName);
+        } else if (stats.enchantments.containsKey(enchantName)) {
+          ItemCompare.LOGGER.info("Skipped enchantment (duplicate): " + enchantName);
         }
       }
     }
 
     ItemCompare.LOGGER.info("Final parsed stats: " + stats.stats);
+    ItemCompare.LOGGER.info("Final parsed enchantments: " + stats.enchantments);
     ItemCompare.LOGGER.info("=== END PARSING ===");
 
     // Update the rarity in the stats object
