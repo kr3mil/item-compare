@@ -14,6 +14,11 @@ public class ItemComparisonScreen extends Screen {
   private final ItemStats firstStats;
   private final ItemStats secondStats;
 
+  // Scroll state management
+  private double scrollOffset = 0.0;
+  private int contentHeight = 0;
+  private int viewableHeight = 0;
+
   public ItemComparisonScreen(ItemStack firstItem, ItemStack secondItem) {
     super(Text.translatable("text.item-compare.comparing"));
     this.firstItem = firstItem;
@@ -69,7 +74,7 @@ public class ItemComparisonScreen extends Screen {
         panelX - 2, panelY - 2, panelX + panelWidth + 2, panelY + panelHeight + 2, 0xFF555555);
     context.fill(panelX, panelY, panelX + panelWidth, panelY + panelHeight, 0xF0000000);
 
-    // Title with better spacing
+    // Title with better spacing (fixed header)
     String titleText =
         "§6Item Comparison: §f"
             + firstItem.getName().getString()
@@ -82,16 +87,42 @@ public class ItemComparisonScreen extends Screen {
     int separatorY = panelY + titleHeight + 5;
     context.fill(panelX + 20, separatorY, panelX + panelWidth - 20, separatorY + 1, 0xFF666666);
 
-    // Item headers with better positioning
+    // Fixed header section
     int itemHeaderY = separatorY + 15;
     renderItemHeader(context, centerX - 180, itemHeaderY, firstItem, firstStats, "§eCurrent Item");
     renderItemHeader(
         context, centerX + 80, itemHeaderY, secondItem, secondStats, "§eCompared Item");
 
-    // Stats section with proper spacing
-    int statsY = itemHeaderY + headerHeight + 10;
+    // Calculate scrollable content area
+    int scrollableContentStartY = itemHeaderY + headerHeight + 10;
+    int scrollableAreaHeight =
+        panelHeight - (scrollableContentStartY - panelY) - 40; // Leave space for close button
+    viewableHeight = scrollableAreaHeight;
+
+    // Enable scissor (clipping) for scrollable content
+    context.enableScissor(
+        panelX,
+        scrollableContentStartY,
+        panelX + panelWidth,
+        scrollableContentStartY + scrollableAreaHeight);
+
+    // Render scrollable content with offset
+    int contentStartY = scrollableContentStartY - (int) scrollOffset;
+    int statsY = contentStartY;
     int enchantY = renderStatComparison(context, centerX, statsY);
-    renderEnchantmentComparison(context, centerX, enchantY + 15);
+    int finalContentY = renderEnchantmentComparison(context, centerX, enchantY + 15);
+
+    // Calculate total content height for scrolling
+    contentHeight = finalContentY - contentStartY;
+
+    // Disable scissor
+    context.disableScissor();
+
+    // Draw scroll indicator if needed
+    if (contentHeight > viewableHeight) {
+      renderScrollIndicator(
+          context, panelX + panelWidth - 10, scrollableContentStartY, scrollableAreaHeight);
+    }
 
     // Don't call super.render() to avoid any blur effects
     // Instead, manually render the widgets
@@ -215,7 +246,7 @@ public class ItemComparisonScreen extends Screen {
     return 14; // Increased line height for better spacing
   }
 
-  private void renderEnchantmentComparison(DrawContext context, int centerX, int startY) {
+  private int renderEnchantmentComparison(DrawContext context, int centerX, int startY) {
     // Section header with separator
     context.drawCenteredTextWithShadow(
         this.textRenderer, "§d§lENCHANTMENTS", centerX, startY, 0xFFFFAA00);
@@ -231,7 +262,7 @@ public class ItemComparisonScreen extends Screen {
     if (allEnchantments.isEmpty()) {
       context.drawCenteredTextWithShadow(
           this.textRenderer, "§7No enchantments found", centerX, currentY, 0xFFFFFFFF);
-      return;
+      return currentY + 14;
     }
 
     // Sort enchantments alphabetically
@@ -246,6 +277,8 @@ public class ItemComparisonScreen extends Screen {
           renderEnchantmentDifference(
               context, centerX, currentY, enchantment, firstLevel, secondLevel);
     }
+
+    return currentY;
   }
 
   private int renderEnchantmentDifference(
@@ -300,6 +333,41 @@ public class ItemComparisonScreen extends Screen {
       return romanNumerals[num];
     }
     return String.valueOf(num); // Fallback for numbers > 10
+  }
+
+  private void renderScrollIndicator(DrawContext context, int x, int startY, int areaHeight) {
+    if (contentHeight <= viewableHeight) return;
+
+    // Calculate scroll bar dimensions
+    int scrollBarHeight =
+        Math.max(20, (int) ((double) viewableHeight / contentHeight * areaHeight));
+    int scrollBarY =
+        startY
+            + (int)
+                (scrollOffset / (contentHeight - viewableHeight) * (areaHeight - scrollBarHeight));
+
+    // Draw scroll track
+    context.fill(x, startY, x + 6, startY + areaHeight, 0x40FFFFFF);
+
+    // Draw scroll bar
+    context.fill(x + 1, scrollBarY, x + 5, scrollBarY + scrollBarHeight, 0x80FFFFFF);
+
+    // Draw scroll bar highlight
+    context.fill(x + 1, scrollBarY, x + 2, scrollBarY + scrollBarHeight, 0xFFFFFFFF);
+  }
+
+  @Override
+  public boolean mouseScrolled(
+      double mouseX, double mouseY, double horizontalAmount, double verticalAmount) {
+    if (contentHeight > viewableHeight) {
+      // Scroll speed: 3 lines per scroll unit
+      double scrollAmount =
+          verticalAmount * -20.0; // Negative because scroll up should move content down
+      scrollOffset =
+          Math.max(0, Math.min(contentHeight - viewableHeight, scrollOffset + scrollAmount));
+      return true;
+    }
+    return super.mouseScrolled(mouseX, mouseY, horizontalAmount, verticalAmount);
   }
 
   @Override
